@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contact Us" content="Contact 348 (Ilkeston) Squadron RAF Air Cadets. Find our address, parade nights, phone number and contact form.">
+    <div class="spacer-50"></div>
+    <div class="page-width">
+        <div class="contact-content">
+            <div class="split-view">
+                <div class="half-width contact-col">
+                    <h1 class="title">CONTACT US</h1>
+                    <p class="page-text">
+                        <b>Address</b><br>
+                        348 (Ilkeston) Squadron<br>
+                        Air Training Corps<br>
+                        The Cadet Centre<br>
+                        Albert St<br>
+                        Ilkeston<br>
+                        Derbyshire<br>
+                        DE7 5GU
+                        <br>
+                        <br>
+                        What3Words- ///table.smile.yard
+                        <br>
+                        <br>
+                        <b>Parade nights</b><br>
+                        <b>Tuesday</b> 18:45 - 21:30<br>
+                        <b>Thursday</b> 18:45 - 21:30
+                        <br>
+                        <br>
+                        <b>Call Us</b><br>
+                        0115 9440848<br>
+                        (Parade nights only)
+                        <br>
+                        <br>
+                        <b>Want to join us?</b><br>
+                        If you'd like to become a member, please use our contact form.
+                        <br>
+                        <br>
+                        We are part of South and East Midlands Wing. Find out more at : <a href="http://www.semidsatc.org.uk/" class="link">http://www.semidsatc.org.uk/</a>
+                    </p>
+                </div>
+                <div class="half-width contact-col">
+                    <form class="defaultform" action="https://api.web3forms.com/submit" method="POST" id="form">
+                        <input type="hidden" name="access_key" value="62d68c08-3c4d-40c1-b377-a750fa98f52f">
+                        <div class="formrow">
+                            <input type="text" placeholder="First Name..." name="first_name" required>
+                            <input type="text" placeholder="Surname..." name="surname">
+                        </div>
+                        <input type="email" placeholder="Email Address..." name="email" required>
+                        <textarea placeholder="Message..." class="message" name="message" required></textarea>
+                        <div class="checkbox-label">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">I hereby agree that my data entered in the contact form will be stored electronically, and will be processed and used for the purpose of establishing contact. I am aware that I can revoke my consent at any time.</label>
+                        </div>
+                        <input type="submit" value="SEND">
+                        <div id="result" class="hidden"></div>
+                    </form>
+                    <div class="spacer-100"></div>
+                    <div class="socials">
+                        <div class="social">
+                            <div class="image"><img src="/images/facebook.png" alt="Facebook"></div>
+                            <p class="text">348 (Ilkeston) Squadron RAFAC</p>
+                        </div>
+                        <div class="social">
+                            <div class="image"><img src="/images/instagram.png" alt="Instagram"></div>
+                            <p class="text">@348ilkeston</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer-50"></div>
+            <h1 class="title">HOW TO FIND US</h1>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.2077992930226!2d-1.3133278230508316!3d52.96983860282766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879ec0c211b5aad%3A0xc88f1d8e5bab04d9!2s348%20(Ilkeston)%20Squadron%20Air%20Training%20Corps!5e1!3m2!1sen!2suk!4v1777485442936!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait..."
+        result.classList.remove('hidden');
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                    result.classList.add('hidden');
+                }, 3000);
+            });
+        });
+    </script>
+</BaseLayout>
