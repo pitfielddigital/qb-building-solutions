@@ -1,7 +1,11 @@
 :root {
-    --background: #F6F6F6;
-    --blue: #1C1E5F;
-    --blue-light: #368eff;
+    --red: #d91c32;
+    --red-light: #ff374e;
+    --red-dark: #af0b1e;
+    --black: #222222;
+    --grey: #bababa;
+    --grey-light: #e9e8e8;
+    --grey-dark: #9c9c9c;
 }
 
 /* MARK: KEY CSS */
@@ -9,7 +13,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Commissioner", sans-serif;
-    background-color: var(--background);
 }
 
 *, *::before, *::after {
