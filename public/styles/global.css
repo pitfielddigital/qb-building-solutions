@@ -380,7 +380,6 @@ main section {
     overflow: hidden;
     box-shadow: 0 0 8px #d1d1d1;
     background: white;
-    padding-bottom: 15px;
 }
 
 .card .title {
@@ -390,7 +389,7 @@ main section {
 }
 
 .card .content {
-    padding: 0 15px;
+    padding: 15px;
 }
 
 .card .card-text {
@@ -404,4 +403,8 @@ main section {
     font-weight: 600;
     margin-top: 15px;
     display: block;
+}
+
+.center .btn {
+    margin: 0 auto;
 }
