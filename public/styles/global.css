@@ -416,3 +416,40 @@ main section {
 .center .btn {
     margin: 0 auto;
 }
+
+section.black {
+    background: black;
+    color: white;
+}
+
+.grid .item {
+    text-align: center;
+}
+
+.grid .item .title {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.grid .item .item-text {
+    font-size: 16px;
+    margin: 0;
+}
+
+.grid .item .icon {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border: 2px solid var(--red);
+    border-radius: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(
+    --red) !important;
+}
