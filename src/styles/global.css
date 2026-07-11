@@ -57,8 +57,12 @@ header {
 }
 
 section {
-    width: 95%;
-    margin: 0 auto;
+    padding: 0 2.5%;
+    width: 100%;
+}
+
+section.grey {
+    background: var(--grey);
 }
 
 .header-content {
