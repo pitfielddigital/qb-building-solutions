@@ -534,3 +534,9 @@ header nav#header_nav .item.selected {
     font-size: 16px;
     margin: 0 auto;
 }
+
+footer .footer-main .logo {
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+}
