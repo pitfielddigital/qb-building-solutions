@@ -110,6 +110,7 @@ header nav#header_nav {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+    border: none;
 }
 
 .btn-red {
@@ -540,4 +541,23 @@ footer .footer-main .logo {
     width: 100px;
     max-width: 100px;
     min-width: 100px;
+}
+
+.map iframe {
+    display: block;
+    width: 100%;
+}
+
+form input:not(.btn), form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
