@@ -31,7 +31,7 @@ const { title, description, menu } = Astro.props;
     <title>{title ? `${title} | ${site.siteName}` : site.siteName}</title>
     <meta name="description" content={description}>
 </head>
-<body data-menu="{menu}">
+<body data-menu={menu}>
     <Header />
     <main>
         <slot />
