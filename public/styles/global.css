@@ -551,7 +551,7 @@ footer .footer-main .logo {
 form input:not(.btn), form textarea {
     width: 100%;
     padding: 8px;
-    border: 2px solid black;
+    border: 2px solid grey;
     border-radius: 5px;
     font-size: 16px;
 }
