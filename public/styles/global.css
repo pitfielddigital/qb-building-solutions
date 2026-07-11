@@ -491,3 +491,46 @@ header nav#header_nav .item.selected {
 .card:hover .content .card-button {
     scale: 1.05;
 }
+
+.our-process {display: flex;gap: 15px;align-items: center;}
+
+.our-process .arrow {
+    display: block;
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    font-size: 35px;
+    color: var(--red);
+}
+
+.our-process .process {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.our-process .process .number {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: var(--red);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.our-process .process .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.our-process .process .process-text {
+    font-size: 16px;
+    margin: 0 auto;
+}
