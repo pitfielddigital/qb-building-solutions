@@ -388,6 +388,7 @@ main section {
     overflow: hidden;
     box-shadow: 0 0 8px #d1d1d1;
     background: white;
+    cursor: pointer;
 }
 
 .card .title {
@@ -452,4 +453,41 @@ section.black {
     text-align: center;
     color: var(
     --red) !important;
+}
+
+.contact-item {
+    display: flex;
+    gap: 5px;
+}
+
+img {
+    display: block;
+}
+
+header nav#header_nav .item:hover {
+    color: var(--red) !important;
+}
+
+header nav#header_nav .item.selected {
+    color: var(--red) !important;
+    border-bottom: 2px solid var(--red);
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: 600;
+}
+
+.card .image {
+    overflow: hidden;
+}
+
+.card .image img, .card .content .card-button {
+    transition: 0.3s ease;
+}
+
+.card:hover .image img {
+    scale: 1.05;
+}
+
+.card:hover .content .card-button {
+    scale: 1.05;
 }
