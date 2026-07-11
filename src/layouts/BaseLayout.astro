@@ -38,4 +38,17 @@ const { title, description, menu } = Astro.props;
     </main>
     <Footer />
 </body>
+<script>
+    const body = document.body;
+    const nav = document.getElementById('header_nav');
+    const navItems = nav.querySelectorAll('.item');
+
+    const selectedMenu = body.dataset.menu;
+
+    navItems.forEach((item) => {
+        if (item.dataset.url === selectedMenu) {
+            item.classList.add('selected');
+        }
+    });
+</script>
 </html>
