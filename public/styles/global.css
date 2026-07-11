@@ -37,6 +37,9 @@ body {
 .spacer-25 {
     min-height: 25px;
 }
+.spacer-35 {
+    min-height: 35px;
+}
 .spacer-50 {
     min-height: 50px;
 }
@@ -314,6 +317,7 @@ footer .footer-main .col a:hover {
     font-size: 14px;
     color: var(--red);
     font-weight: 600;
+    margin: 0;
 }
 
 .hero .content .text {
@@ -355,6 +359,7 @@ main section {
 .standout {
     font-weight: 600;
     font-size: 40px;
+    margin: 0;
 }
 
 .btn-white-red {
