@@ -28,5 +28,10 @@
         "title": "General Building",
         "short_intro": "From minor repairs to full renovations, we cover all aspects of building work.",
         "page_content": "<p>Our general building service covers a wide range of repairs, improvements and renovation projects. No matter the size of the job, we approach every project with the same care and attention.</p><p>We can carry out standalone building work or manage several trades as part of a larger property improvement project.</p><h2>Our general building services include:</h2><ul><li>Property renovations</li><li>Structural alterations</li><li>Internal wall changes</li><li>Repairs and maintenance</li><li>Plastering and finishing</li><li>Outdoor building work</li></ul><p>Tell us what you want to improve, and we will help identify the most practical way to complete the work.</p>"
+    },
+    "groundworks": {
+        "title": "Groundworks",
+        "short_intro": "Professional groundwork services including foundations, drainage, site preparation and excavation for projects of all sizes.",
+        "page_content": "<p>A strong project starts with quality groundwork. At QB Building Solutions, we provide reliable groundwork services for residential and commercial projects, ensuring every build begins on solid foundations.</p><p>From site clearance and excavation to drainage installation and concrete foundations, we carry out every stage with precision and attention to detail.</p><h2>Our groundwork services include:</h2><ul><li>Site clearance and preparation</li><li>Excavation and earthworks</li><li>Concrete foundations</li><li>Drainage installation and repairs</li><li>Footings and retaining structures</li><li>Driveway and paving preparation</li></ul><p>Whether you're planning a new build, extension or landscaping project, our experienced team will ensure the groundwork is completed safely, efficiently and to the highest standard.</p>"
     }
 }
