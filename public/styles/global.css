@@ -687,7 +687,7 @@ footer .footer-copyright p {
         font-size: 2.5vw;
     }
     .btn {
-        font-size: clamp(8px, 2vw, 14px);
+        font-size: clamp(10px, 2vw, 14px);
         padding: 10px;
     }
     .our-process {
@@ -769,6 +769,12 @@ footer .footer-copyright p {
     }
     .information-block .title {
         font-size: 16px;
+    }
+    .contact-information-item .title {
+        font-size: 14px;
+    }
+    .contact-information-item .info-text {
+        font-size: 14px;
     }
 }
 
