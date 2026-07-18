@@ -135,6 +135,7 @@ label.show-nav {
     max-height: 20px;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 label.show-nav .line {
@@ -149,6 +150,9 @@ label.show-nav .line {
 @media (min-width: 1000px) {
     label.show-nav {
         display: none !important;
+    }
+    .mobile {
+        display: none;
     }
 }
 
@@ -634,7 +638,6 @@ footer .footer-copyright p {
     header:has(#show_nav:checked) nav#header_nav {
         right: 0;
     }
-    
     header nav#header_nav {
         position: fixed;
         right: -100%;
@@ -651,11 +654,13 @@ footer .footer-copyright p {
         box-shadow: 0 0 7px black;
         transition: 0.3s ease;
     }
-    
     header nav#header_nav .item.selected {
         padding: 0;
     }
     header nav#header_nav .item {
         font-size: 20px;
+    }
+    header .get-quote {
+        display: none;
     }
 }
