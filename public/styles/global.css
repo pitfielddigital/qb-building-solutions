@@ -413,11 +413,12 @@ main section {
 }
 
 .card .card-button {
-    color: var(--red);
+    color: var(--red) !important;
     font-size: 13px !important;
     font-weight: 600;
     margin-top: 15px;
     display: block;
+    text-decoration: none !important;
 }
 
 .center .btn {
@@ -651,7 +652,7 @@ footer .footer-copyright p {
 }
 
 .error-cards .card:hover {
-    padding: 18px;
+    box-shadow: 0 0 12px #8b8b8b;
 }
 
 .error-cards .card * {
@@ -666,6 +667,11 @@ footer .footer-copyright p {
 .error-cards .card p.page-text {
     display: flex;
     align-items: flex-start;
+}
+
+.card *:not(.card-button) {
+    color: black !important;
+    text-decoration: none !important;
 }
 
 @media (min-width: 1200px) {
