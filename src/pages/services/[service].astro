@@ -18,17 +18,15 @@ const { service } = Astro.props;
             <img src={`https://pitfielddigital.github.io/qb-building-solutions/images/${service.hero_image}`} alt={service.title} width="100%">
         </div>
         <div class="content">
-            <h1 class="text-heading">{service.title}</h1>
-            <div class="text">{service.short_intro}</div>
+            <div class="text">{service.title}</div>
             <hr class="hero-break">
-            <a class="button btn btn-red" href="https://pitfielddigital.github.io/qb-building-solutions/contact">GET A QUOTE</a>
+            <div class="subtext">{service.short_intro}</div>
         </div>
     </div>
     <section>
         <div class="row row-2">
             <div class="column">
                 <h2 class="text-heading">{service.title}</h1>
-                <div class="spacer-35"></div>
                 <div set:html={service.page_content} />
                 <div class="spacer-35"></div>
                 <a class="button btn btn-red" href="https://pitfielddigital.github.io/qb-building-solutions/contact">GET A QUOTE</a>
