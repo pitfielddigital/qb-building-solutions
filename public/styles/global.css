@@ -629,3 +629,33 @@ footer .footer-copyright p {
     font-size: 75px;
     margin: 0;
 }
+
+@media (max-width: 1000px) {
+    header:has(#show_nav:checked) nav#header_nav {
+        right: 0;
+    }
+    
+    header nav#header_nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        max-width: 350px;
+        justify-content: flex-start;
+        gap: 20px;
+        background: #222222;
+        z-index: 10;
+        padding-top: 20px;
+        box-shadow: 0 0 7px black;
+        transition: 0.3s ease;
+    }
+    
+    header nav#header_nav .item.selected {
+        padding: 0;
+    }
+    header nav#header_nav .item {
+        font-size: 20px;
+    }
+}
