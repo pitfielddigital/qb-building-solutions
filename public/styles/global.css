@@ -306,18 +306,16 @@ footer .footer-main .col a:hover {
 
 .hero .content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    width: auto;
+    height: auto;
     background: linear-gradient(90deg, black, transparent);
     color: white;
     padding-left: 50px;
+    padding-right: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 50%;
     gap: 20px;
 }
 
@@ -686,6 +684,7 @@ footer .footer-copyright p {
 .card * {
     text-decoration: none !important;
 }
+
 
 @media (min-width: 1200px) {
     .error-cards .card p.page-text {
