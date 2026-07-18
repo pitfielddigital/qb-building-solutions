@@ -1,9 +1,44 @@
 {
-    "bricklaying": {
-        "title": "Bricklaying",
-        "hero_image": "bricklaying.png",
-        "short_intro": "Professional bricklaying services.",
-        "page_image": "bricklaying-example.png",
-        "page_content": "Extensions<br>Walls<br>Repairs"
-    }
+  "bricklaying": {
+    "title": "Bricklaying",
+    "hero_image": "bricklaying.png",
+    "short_intro": "High quality brickwork for new builds, extensions, garden walls and more.",
+    "page_image": "bricklaying-example.png",
+    "page_content": "<p>At QB Building Solutions, we provide professional bricklaying services for projects of all sizes. Whether you need a new garden wall, structural brickwork for an extension or brickwork for a complete new build, we deliver a strong and reliable finish.</p><p>We take care to match existing brickwork wherever possible and ensure every project is completed neatly, safely and to a high standard.</p><h2>Our bricklaying services include:</h2><ul><li>New build brickwork</li><li>Home extensions</li><li>Garden and boundary walls</li><li>Brick repairs and repointing</li><li>Structural alterations</li><li>Door and window openings</li></ul><p>Contact us to discuss your bricklaying requirements and arrange a quotation.</p>"
+  },
+  "joinery": {
+    "title": "Joinery",
+    "hero_image": "joinery.png",
+    "short_intro": "Bespoke carpentry and joinery services, from doors to kitchen installations.",
+    "page_image": "joinery-example.png",
+    "page_content": "<p>Our joinery services cover everything from small carpentry jobs to complete kitchen installations. We create practical, attractive and durable results tailored to your property.</p><p>Whether you need new internal doors, custom storage or timber work as part of a renovation, we can manage the work from preparation through to installation.</p><h2>Our joinery services include:</h2><ul><li>Kitchen fitting</li><li>Internal and external doors</li><li>Skirting boards and architraves</li><li>Custom shelving and storage</li><li>Stud walls and timber framing</li><li>Flooring and finishing work</li></ul><p>Every installation is measured carefully and completed with close attention to detail.</p>"
+  },
+  "site-management": {
+    "title": "Site Management",
+    "hero_image": "site-management.png",
+    "short_intro": "Professional site management to ensure your project runs smoothly.",
+    "page_image": "site-management-example.png",
+    "page_content": "<p>Effective site management is essential for keeping a building project organised, safe and on schedule. We provide experienced site management for residential and commercial construction projects.</p><p>We coordinate trades, monitor progress, manage deliveries and help resolve issues before they cause unnecessary delays.</p><h2>Our site management service includes:</h2><ul><li>Planning and scheduling work</li><li>Coordinating contractors and trades</li><li>Monitoring workmanship</li><li>Managing materials and deliveries</li><li>Maintaining site safety</li><li>Providing progress updates</li></ul><p>Our aim is to keep every stage of your project moving efficiently while maintaining high standards throughout.</p>"
+  },
+  "extensions": {
+    "title": "Extensions",
+    "hero_image": "extensions.png",
+    "short_intro": "Single and double-storey extensions that create the extra space you need, managed from design to completion.",
+    "page_image": "extensions-example.png",
+    "page_content": "<p>A home extension can provide the extra space you need without the cost and disruption of moving. We build single and double-storey extensions designed around your property and the way you want to use it.</p><p>From the initial groundwork and structural work through to roofing, joinery and internal finishes, we can manage the full construction process.</p><h2>Extension projects can include:</h2><ul><li>Kitchen extensions</li><li>Living and dining spaces</li><li>Additional bedrooms</li><li>Home offices</li><li>Utility rooms</li><li>Garage conversions and extensions</li></ul><p>We work closely with homeowners throughout the project to deliver an extension that feels like a natural part of the existing property.</p>"
+  },
+  "new-builds": {
+    "title": "New Builds",
+    "hero_image": "new-builds.png",
+    "short_intro": "Complete new build homes constructed to the highest standards, with support at every stage.",
+    "page_image": "new-builds-example.png",
+    "page_content": "<p>Building a new home is a major project, and choosing the right building team makes all the difference. We provide complete new build construction services, helping turn approved plans into a finished property.</p><p>We manage the work carefully from the foundations upwards, ensuring each stage is completed correctly and in line with the required specifications.</p><h2>Our new build service covers:</h2><ul><li>Groundworks and foundations</li><li>Brick and block construction</li><li>Roofing and structural work</li><li>Windows and doors</li><li>Internal joinery and finishes</li><li>Coordination of specialist trades</li></ul><p>We maintain clear communication throughout the build so you always know how the project is progressing.</p>"
+  },
+  "general-building": {
+    "title": "General Building",
+    "hero_image": "general-building.png",
+    "short_intro": "From minor repairs to full renovations, we cover all aspects of building work.",
+    "page_image": "general-building-example.png",
+    "page_content": "<p>Our general building service covers a wide range of repairs, improvements and renovation projects. No matter the size of the job, we approach every project with the same care and attention.</p><p>We can carry out standalone building work or manage several trades as part of a larger property improvement project.</p><h2>Our general building services include:</h2><ul><li>Property renovations</li><li>Structural alterations</li><li>Internal wall changes</li><li>Repairs and maintenance</li><li>Plastering and finishing</li><li>Outdoor building work</li></ul><p>Tell us what you want to improve, and we will help identify the most practical way to complete the work.</p>"
+  }
 }
