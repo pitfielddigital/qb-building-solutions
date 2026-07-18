@@ -647,6 +647,11 @@ footer .footer-copyright p {
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+    transition: 0.3s ease;
+}
+
+.error-cards .card:hover {
+    padding: 18px;
 }
 
 .error-cards .card * {
@@ -656,6 +661,29 @@ footer .footer-copyright p {
 .error-cards .card .icon {
     font-size: 50px;
     color: var(--red);
+}
+
+.error-cards .card p.page-text {
+    display: flex;
+    align-items: flex-start;
+}
+
+@media (min-width: 1200px) {
+    .error-cards .card p.page-text {
+        height: 75px;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+    .error-cards .card p.page-text {
+        height: 125px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 767px) {
+    .error-cards .card p.page-text {
+        height: 150px;
+    }
 }
 
 @media (max-width: 1000px) {
