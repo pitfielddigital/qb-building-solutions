@@ -671,7 +671,7 @@ footer .footer-copyright p {
         margin-top: 25px;
     }
     .hero .content {
-        padding: 0 25px !important;
+        padding: 0 2.5% !important;
         gap: 10px !important;
     }
     .hero .content .text {
@@ -706,7 +706,7 @@ footer .footer-copyright p {
     }
     p.page-text {
         font-size: clamp(14px, 2.5vw, 20px);
-        line-height: 4vw;
+        line-height: 20px;
     }
     .card .title {
         font-size: clamp(16px, 2vw, 20px);
@@ -725,5 +725,8 @@ footer .footer-copyright p {
 @media (max-width: 550px) {
     .grid-4 {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .grid {
+        grid-gap: 30px;
     }
 }
