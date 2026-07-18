@@ -319,6 +319,21 @@ footer .footer-main .col a:hover {
     gap: 20px;
 }
 
+.hero,
+.hero .image,
+.hero .image img {
+    width: 100%;
+}
+
+.hero .image {
+    line-height: 0;
+}
+
+.hero .image img {
+    display: block;
+    height: auto;
+}
+
 .text-heading {
     font-size: 14px;
     color: var(--red);

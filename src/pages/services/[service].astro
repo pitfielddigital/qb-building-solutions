@@ -16,7 +16,7 @@ const { service: slug } = Astro.params;
 <BaseLayout title={service.title} description={service.title} menu="services">
     <div class="hero">
         <div class="image">
-            <img src={`https://pitfielddigital.github.io/qb-building-solutions/images/banners/${slug}.png`} alt={service.title} width="100%">
+            <img src={`https://pitfielddigital.github.io/qb-building-solutions/images/banners/${slug}.png`} alt={service.title}>
         </div>
         <div class="content">
             <div class="text">{service.title}</div>
