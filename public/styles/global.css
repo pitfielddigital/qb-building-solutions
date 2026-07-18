@@ -50,7 +50,7 @@ body {
     min-height: 100px;
 }
 
-p.page-text {
+p.page-text, ul {
     font-size: 20px;
     line-height: 28px;
     margin: 0;
@@ -550,10 +550,16 @@ footer .footer-main .logo {
 
 form input:not(.btn), form textarea {
     width: 100%;
-    padding: 8px;
+    padding: 12px 8px;
     border: 1px solid grey;
     border-radius: 5px;
     font-size: 16px;
+    outline: none !important;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 200px;
 }
 
 form {
@@ -684,6 +690,35 @@ footer .footer-copyright p {
         font-size: clamp(8px, 2vw, 14px);
         padding: 10px;
     }
+    .our-process {
+        flex-direction: column;
+    }
+    .our-process .arrow {
+        transform: rotate(90deg);
+    }
+    footer .footer-main section {
+        flex-direction: column;
+        gap: 50px;
+    }
+    footer .footer-main section .col {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+    .ready-to-start .icon {
+        width: 40px;
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+    }
+    .ready-to-start .text .title {
+        font-size: clamp(16px, 3vw, 24px);
+    }
+    .ready-to-start .text p {
+        font-size: clamp(13px, 2vw, 18px);
+    }
 }
 
 @media (max-width: 650px) {
@@ -704,7 +739,7 @@ footer .footer-copyright p {
     .standout {
         font-size: clamp(20px, 5vw, 30px);
     }
-    p.page-text {
+    p.page-text, ul {
         font-size: clamp(14px, 2.5vw, 20px);
         line-height: 20px;
     }
@@ -717,16 +752,33 @@ footer .footer-copyright p {
 }
 
 @media (max-width: 767px) and (min-width: 550px) {
-    .grid-4 {
+    .grid-4, .grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 550px) {
-    .grid-4 {
+    .grid-4, .grid-3 {
         grid-template-columns: repeat(1, 1fr);
     }
     .grid {
         grid-gap: 30px;
+    }
+    .information-block .icon {
+        font-size: 50px;
+    }
+    .information-block .title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    footer .footer-contact section {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .ready-to-start .icon {
+        display: none;
     }
 }
