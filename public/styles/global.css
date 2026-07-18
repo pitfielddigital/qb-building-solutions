@@ -663,4 +663,26 @@ footer .footer-copyright p {
     header .get-quote {
         display: none;
     }
+    label.close-nav {
+        color: white;
+        font-size: 20px;
+        width: 100%;
+        text-align: right;
+        padding: 0 20px 0 0;
+        cursor: pointer;
+    }
+    header nav#header_nav .btn.btn-red.mobile {
+        margin-top: 25px;
+    }
+    .hero .content {
+        padding: 0 25px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    header .logo, footer .logo {
+        width: 65px !important;
+        max-width: 65px !important;
+        min-width: 65px !important;
+    }
 }
