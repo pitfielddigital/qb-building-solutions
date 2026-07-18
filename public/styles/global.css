@@ -603,6 +603,8 @@ form {
 .contact-information-item .title {
     font-size: 16px;
     font-weight: 600;
+    color: black !important;
+    text-decoration: none !important;
 }
 
 .contact-information-item .info-text {

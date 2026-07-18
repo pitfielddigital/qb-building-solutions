@@ -1,0 +1,9 @@
+{
+    "bricklaying": {
+        "title": "Bricklaying",
+        "hero_image": "bricklaying.png",
+        "short_intro": "Professional bricklaying services.",
+        "page_image": "bricklaying-example.png",
+        "page_content": "Extensions<br>Walls<br>Repairs"
+    }
+}
