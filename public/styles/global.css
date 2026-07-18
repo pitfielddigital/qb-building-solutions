@@ -640,7 +640,7 @@ footer .footer-copyright p {
     }
     header nav#header_nav {
         position: fixed;
-        right: -100%;
+        right: calc(-100% - 10px);
         top: 0;
         flex-direction: column;
         height: 100%;
@@ -676,6 +676,16 @@ footer .footer-copyright p {
     }
     .hero .content {
         padding: 0 25px !important;
+    }
+    .hero .content .text {
+        font-size: 5vw;
+    }
+    .hero .content .subtext {
+        font-size: 2.5vw;
+    }
+    .btn {
+        font-size: clamp(8px, 2vw, 14px);
+        padding: 10px;
     }
 }
 
