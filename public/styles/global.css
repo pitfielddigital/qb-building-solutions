@@ -640,6 +640,24 @@ footer .footer-copyright p {
     color: var(--red);
 }
 
+.error-cards .card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.error-cards .card * {
+    margin: 0;
+}
+
+.error-cards .card .icon {
+    font-size: 50px;
+    color: var(--red);
+}
+
 @media (max-width: 1000px) {
     header:has(#show_nav:checked) nav#header_nav {
         right: 0;
@@ -722,6 +740,12 @@ footer .footer-copyright p {
     }
     .ready-to-start .text p {
         font-size: clamp(13px, 2vw, 18px);
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 767px) {
+    .grid-4.error-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
