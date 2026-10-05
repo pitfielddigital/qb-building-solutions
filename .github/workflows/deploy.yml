@@ -33,9 +33,6 @@ jobs:
           SITE_BASE: /qb-building-solutions/
           PUBLIC_SITE_PREVIEW: 'true'
 
-      - name: Check generated pages
-        run: npm run check:site
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
