@@ -1,37 +1,731 @@
 {
-    "bricklaying": {
-        "title": "Bricklaying",
-        "short_intro": "High quality brickwork for new builds, extensions, garden walls and more.",
-        "page_content": "<p>At QB Building Solutions, we provide professional bricklaying services for projects of all sizes. Whether you need a new garden wall, structural brickwork for an extension or brickwork for a complete new build, we deliver a strong and reliable finish.</p><p>We take care to match existing brickwork wherever possible and ensure every project is completed neatly, safely and to a high standard.</p><h2>Our bricklaying services include:</h2><ul><li>New build brickwork</li><li>Home extensions</li><li>Garden and boundary walls</li><li>Brick repairs and repointing</li><li>Structural alterations</li><li>Door and window openings</li></ul><p>Contact us to discuss your bricklaying requirements and arrange a quotation.</p>"
-    },
-    "joinery": {
-        "title": "Joinery",
-        "short_intro": "Bespoke carpentry and joinery services, from doors to kitchen installations.",
-        "page_content": "<p>Our joinery services cover everything from small carpentry jobs to complete kitchen installations. We create practical, attractive and durable results tailored to your property.</p><p>Whether you need new internal doors, custom storage or timber work as part of a renovation, we can manage the work from preparation through to installation.</p><h2>Our joinery services include:</h2><ul><li>Kitchen fitting</li><li>Internal and external doors</li><li>Skirting boards and architraves</li><li>Custom shelving and storage</li><li>Stud walls and timber framing</li><li>Flooring and finishing work</li></ul><p>Every installation is measured carefully and completed with close attention to detail.</p>"
-    },
-    "site-management": {
-        "title": "Site Management",
-        "short_intro": "Professional site management to ensure your project runs smoothly.",
-        "page_content": "<p>Effective site management is essential for keeping a building project organised, safe and on schedule. We provide experienced site management for residential and commercial construction projects.</p><p>We coordinate trades, monitor progress, manage deliveries and help resolve issues before they cause unnecessary delays.</p><h2>Our site management service includes:</h2><ul><li>Planning and scheduling work</li><li>Coordinating contractors and trades</li><li>Monitoring workmanship</li><li>Managing materials and deliveries</li><li>Maintaining site safety</li><li>Providing progress updates</li></ul><p>Our aim is to keep every stage of your project moving efficiently while maintaining high standards throughout.</p>"
-    },
-    "extensions": {
-        "title": "Extensions",
-        "short_intro": "Single and double-storey extensions that create the extra space you need, managed from design to completion.",
-        "page_content": "<p>A home extension can provide the extra space you need without the cost and disruption of moving. We build single and double-storey extensions designed around your property and the way you want to use it.</p><p>From the initial groundwork and structural work through to roofing, joinery and internal finishes, we can manage the full construction process.</p><h2>Extension projects can include:</h2><ul><li>Kitchen extensions</li><li>Living and dining spaces</li><li>Additional bedrooms</li><li>Home offices</li><li>Utility rooms</li><li>Garage conversions and extensions</li></ul><p>We work closely with homeowners throughout the project to deliver an extension that feels like a natural part of the existing property.</p>"
-    },
-    "new-builds": {
-        "title": "New Builds",
-        "short_intro": "Complete new build homes constructed to the highest standards, with support at every stage.",
-        "page_content": "<p>Building a new home is a major project, and choosing the right building team makes all the difference. We provide complete new build construction services, helping turn approved plans into a finished property.</p><p>We manage the work carefully from the foundations upwards, ensuring each stage is completed correctly and in line with the required specifications.</p><h2>Our new build service covers:</h2><ul><li>Groundworks and foundations</li><li>Brick and block construction</li><li>Roofing and structural work</li><li>Windows and doors</li><li>Internal joinery and finishes</li><li>Coordination of specialist trades</li></ul><p>We maintain clear communication throughout the build so you always know how the project is progressing.</p>"
-    },
-    "general-building": {
-        "title": "General Building",
-        "short_intro": "From minor repairs to full renovations, we cover all aspects of building work.",
-        "page_content": "<p>Our general building service covers a wide range of repairs, improvements and renovation projects. No matter the size of the job, we approach every project with the same care and attention.</p><p>We can carry out standalone building work or manage several trades as part of a larger property improvement project.</p><h2>Our general building services include:</h2><ul><li>Property renovations</li><li>Structural alterations</li><li>Internal wall changes</li><li>Repairs and maintenance</li><li>Plastering and finishing</li><li>Outdoor building work</li></ul><p>Tell us what you want to improve, and we will help identify the most practical way to complete the work.</p>"
-    },
-    "groundworks": {
-        "title": "Groundworks",
-        "short_intro": "Professional groundwork services including foundations, drainage, site preparation and excavation for projects of all sizes.",
-        "page_content": "<p>A strong project starts with quality groundwork. At QB Building Solutions, we provide reliable groundwork services for residential and commercial projects, ensuring every build begins on solid foundations.</p><p>From site clearance and excavation to drainage installation and concrete foundations, we carry out every stage with precision and attention to detail.</p><h2>Our groundwork services include:</h2><ul><li>Site clearance and preparation</li><li>Excavation and earthworks</li><li>Concrete foundations</li><li>Drainage installation and repairs</li><li>Footings and retaining structures</li><li>Driveway and paving preparation</li></ul><p>Whether you're planning a new build, extension or landscaping project, our experienced team will ensure the groundwork is completed safely, efficiently and to the highest standard.</p>"
-    }
+  "bricklaying": {
+    "title": "Bricklaying",
+    "seo_title": "Bricklayers in Belper & Derbyshire | QB Building Solutions",
+    "description": "Bricklaying for new builds, extensions, walls and repairs in Belper, Duffield, Allestree and Derbyshire. Discuss your brickwork with QB Building Solutions.",
+    "heading": "Bricklayers in Belper and Derbyshire",
+    "card": "Brickwork for new builds, extensions, garden walls and improvements to existing properties.",
+    "short_intro": "Looking for a bricklayer in Belper, Duffield or Allestree? QB Building Solutions carries out brickwork for standalone jobs and larger building projects across Derbyshire.",
+    "image": "bricklaying",
+    "image_alt": "Brick arch and blockwork during construction",
+    "banner": "bricklaying",
+    "sections": [
+      {
+        "heading": "Brickwork that fits the project",
+        "paragraphs": [
+          "A new wall, an extension and a complete home each have different requirements. We discuss the purpose of the work, the existing structure and the proposed finish before agreeing the scope. For work on an existing property, brick choice and the relationship between old and new masonry are part of that discussion."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Our bricklaying work includes",
+        "paragraphs": [],
+        "items": [
+          "Brick and blockwork for new builds.",
+          "Extension brickwork and associated building work.",
+          "Garden and boundary walls.",
+          "Brick repairs and repointing.",
+          "Door and window openings and structural alterations, subject to the required design."
+        ]
+      },
+      {
+        "heading": "From foundations to finished masonry",
+        "paragraphs": [
+          "Brickwork often depends on work below ground and the structure around it. Where your job needs foundations, joinery or other building work, we can discuss these stages together. Explore our groundworks and extensions services for related work."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Bricklaying enquiries across Derbyshire",
+        "paragraphs": [
+          "We serve Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire. Tell us where the work is needed and whether it is a repair, a wall or part of a larger build."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can you discuss matching existing brickwork?",
+        "answer": "Yes. We can assess the existing masonry and discuss suitable options. An exact match depends on the bricks available and the condition of the original work."
+      },
+      {
+        "question": "Can I enquire about a garden wall?",
+        "answer": "Yes. Walls are part of our building scope. Share the location and approximate size so we can discuss the job."
+      }
+    ],
+    "related": [
+      "groundworks",
+      "extensions",
+      "general-building"
+    ]
+  },
+  "joinery": {
+    "title": "Joinery",
+    "seo_title": "Joiners in Belper & Derbyshire | QB Building Solutions",
+    "description": "Joinery and carpentry in Belper, Duffield, Allestree and Derbyshire. Explore doors, interior timber work, storage and kitchen fitting with QB.",
+    "heading": "Joiners in Belper and Derbyshire",
+    "card": "Carpentry and joinery for doors, interior timber work, storage and kitchen installations.",
+    "short_intro": "Our joinery team works on individual installations and the timber work within wider building projects. We welcome enquiries from Belper, Duffield, Allestree and the surrounding Derbyshire area.",
+    "image": "joinery",
+    "image_alt": "Kitchen with fitted cupboards and timber flooring",
+    "banner": "joinery",
+    "sections": [
+      {
+        "heading": "Practical joinery for your property",
+        "paragraphs": [
+          "Joinery shapes how a room works and how the finished space feels. From fitting doors to completing the timber details of a renovation, we discuss measurements, materials and the finish needed for the job."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Joinery work we can discuss",
+        "paragraphs": [],
+        "items": [
+          "Kitchen fitting and associated carpentry.",
+          "Internal and external doors.",
+          "Skirting boards and architraves.",
+          "Shelving and storage.",
+          "Stud walls and timber framing.",
+          "Flooring and finishing work."
+        ]
+      },
+      {
+        "heading": "Part of a bigger improvement?",
+        "paragraphs": [
+          "If the joinery is part of a kitchen installation, extension or renovation, the order of work matters. We can discuss how it connects to the building work and other trades. Our Kitchens page explains the difference between fitting a new kitchen and changing the space around it."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Local joinery enquiries",
+        "paragraphs": [
+          "We work across Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire. Send a description of the work and the property location to start the discussion."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do you fit kitchens?",
+        "answer": "Kitchen installations are part of our service scope. Tell us whether you have selected the kitchen and whether building alterations are also needed."
+      },
+      {
+        "question": "Can joinery be included in a renovation?",
+        "answer": "Yes. We can discuss the timber and finishing work alongside the wider building scope."
+      }
+    ],
+    "related": [
+      "kitchens",
+      "extensions",
+      "restoration-renovation"
+    ]
+  },
+  "site-management": {
+    "title": "Site Management",
+    "seo_title": "Site Management in Derbyshire | QB Building Solutions",
+    "description": "Discuss construction site management in Derbyshire with QB Building Solutions, including trade coordination, scheduling and progress communication.",
+    "heading": "Construction site management in Derbyshire",
+    "card": "Coordination of trades, materials and construction stages to keep agreed work organised.",
+    "short_intro": "Building work needs trades, materials and decisions to arrive in the right order. Our site management service helps organise the practical stages of construction projects.",
+    "image": "site-management",
+    "image_alt": "QB Building Solutions van",
+    "banner": "site-management",
+    "sections": [
+      {
+        "heading": "Coordination throughout the build",
+        "paragraphs": [
+          "We discuss the project scope and the management support required before agreeing our role. That can include coordinating work, reviewing progress and helping teams respond to issues as they arise."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Support can include",
+        "paragraphs": [],
+        "items": [
+          "Planning the sequence of construction work.",
+          "Coordinating contractors and trades.",
+          "Arranging materials and deliveries.",
+          "Monitoring workmanship and progress.",
+          "Coordinating site safety arrangements within the agreed role.",
+          "Keeping customers informed about progress and decisions."
+        ]
+      },
+      {
+        "heading": "Agreeing responsibilities clearly",
+        "paragraphs": [
+          "The management role depends on the project and the contracts in place. We establish what is included and how we will work with your designer, contractors or other appointed professionals. Do not assume this service automatically includes architectural design, statutory appointments or principal contractor duties."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Projects across our service area",
+        "paragraphs": [
+          "Discuss site management for work in Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne or elsewhere in Derbyshire."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can you coordinate several trades?",
+        "answer": "Trade coordination forms part of this service. The precise teams and responsibilities are agreed for the project."
+      },
+      {
+        "question": "Is site management the same as design?",
+        "answer": "No. Design and construction management are different roles. Tell us which professionals are already involved so we can discuss the support needed."
+      }
+    ],
+    "related": [
+      "new-builds",
+      "extensions",
+      "groundworks"
+    ]
+  },
+  "extensions": {
+    "title": "Extensions",
+    "seo_title": "House Extensions in Belper & Derbyshire | QB Building Solutions",
+    "description": "Plan a house or kitchen extension in Belper, Duffield, Allestree or Quarndon. Discuss foundations, building work and finishes with QB Building Solutions.",
+    "heading": "House extensions in Belper and Derbyshire",
+    "card": "Single and double-storey extensions that add useful space to your existing home.",
+    "short_intro": "An extension can make room for a larger kitchen, more living space or another bedroom. We carry out extension building work in Belper, Duffield, Allestree, Quarndon and the wider Derbyshire area.",
+    "image": "extensions",
+    "image_alt": "Single-storey brick extension with glazed doors",
+    "banner": "extensions",
+    "sections": [
+      {
+        "heading": "More room for the way you live",
+        "paragraphs": [
+          "The best starting point is what you want the new space to do. We discuss the proposed layout, existing property and available drawings so the building scope can be understood before work is agreed."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Extension projects can include",
+        "paragraphs": [],
+        "items": [
+          "Single and double-storey additions.",
+          "Kitchen and dining extensions.",
+          "Larger living areas.",
+          "Bedrooms and home offices.",
+          "Utility rooms and supporting spaces.",
+          "Foundations, brickwork, structural work and internal finishes within the agreed scope."
+        ]
+      },
+      {
+        "heading": "Connecting the new space to your home",
+        "paragraphs": [
+          "An extension needs to work with the building already there. Ground conditions, openings, structural requirements and finishing details all affect the construction. Our building teams and QB Groundworks division can discuss how these stages connect. Kitchen fitting and joinery can also be included where required."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Plans, approvals and the next step",
+        "paragraphs": [
+          "Planning requirements and building regulations depend on the property and proposal. Do not assume an extension is automatically permitted. Let us know which drawings, permissions and professional advice you already have so we can discuss the next step with you and your appointed advisers."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can you build a kitchen extension?",
+        "answer": "Yes. We can discuss the extension construction and kitchen fitting together, with the scope agreed around your plans."
+      },
+      {
+        "question": "Do I need drawings before enquiring?",
+        "answer": "You can contact us before drawings are ready. Detailed plans and site information may be needed before we can prepare a construction quote."
+      }
+    ],
+    "related": [
+      "kitchens",
+      "groundworks",
+      "steel-erection",
+      "joinery"
+    ]
+  },
+  "new-builds": {
+    "title": "New Builds",
+    "seo_title": "New Build Construction in Derbyshire | QB Building Solutions",
+    "description": "New home construction across Belper and Derbyshire. Discuss foundations, brickwork, structural stages and finishing work with QB Building Solutions.",
+    "heading": "New build construction in Derbyshire",
+    "card": "Construction for new homes, bringing together groundwork, structural work and finishing trades.",
+    "short_intro": "A new home brings many stages together on one site. QB Building Solutions welcomes enquiries for new build construction across Belper and Derbyshire.",
+    "image": "new-builds",
+    "image_alt": "Brick houses with pitched roofs and garages",
+    "banner": "new-builds",
+    "sections": [
+      {
+        "heading": "Turning plans into construction",
+        "paragraphs": [
+          "We discuss your approved plans, specifications and site requirements to establish the building work needed. Understanding the design and the sequence of construction helps define the scope before the project starts."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Construction stages we can discuss",
+        "paragraphs": [],
+        "items": [
+          "Site preparation, groundworks and foundations.",
+          "Brick and block construction.",
+          "Structural work and roofing requirements.",
+          "Windows, doors and joinery.",
+          "Kitchens and internal finishes.",
+          "Coordination of specialist trades within the agreed scope."
+        ]
+      },
+      {
+        "heading": "A connected team from the ground up",
+        "paragraphs": [
+          "QB Groundworks supports an integral part of a new build. Our bricklayers and joiners then contribute to the structure and finishing stages. Site management can help coordinate the trades and deliveries around the agreed programme."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Prepare for a useful first conversation",
+        "paragraphs": [
+          "Tell us where the site is, what you are planning and which permissions, drawings and specifications are available. We serve Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I enquire while the project is being planned?",
+        "answer": "Yes. Explain the stage you have reached. The information required for a quote depends on how developed the design and specification are."
+      },
+      {
+        "question": "Are architectural design and permissions included?",
+        "answer": "Do not assume they are included. We agree our construction scope and how we will work with your appointed professionals."
+      }
+    ],
+    "related": [
+      "groundworks",
+      "bricklaying",
+      "site-management"
+    ]
+  },
+  "general-building": {
+    "title": "General Building",
+    "seo_title": "General Builders in Derbyshire | QB Building Solutions",
+    "description": "Building repairs, alterations and property improvements in Belper, Duffield, Allestree, Quarndon and Derbyshire. Discuss your project with QB.",
+    "heading": "General building work in Belper and Derbyshire",
+    "card": "Repairs, alterations and property improvements, from a defined building job to wider renovation work.",
+    "short_intro": "Some projects need a complete build; others need a wall changed, a repair completed or an existing space improved. Our general building service covers a range of property work across Derbyshire.",
+    "image": "general-building",
+    "image_alt": "Scaffolding around a building during construction",
+    "banner": "general-building",
+    "sections": [
+      {
+        "heading": "Building around your requirements",
+        "paragraphs": [
+          "Describe the problem you want to solve or the change you want to make. We can discuss the property, the work involved and whether the job needs one trade or several teams."
+        ],
+        "items": []
+      },
+      {
+        "heading": "General building work can include",
+        "paragraphs": [],
+        "items": [
+          "Property repairs and improvements.",
+          "Structural alterations to an agreed design.",
+          "Internal wall changes and openings.",
+          "Renovation and restoration work.",
+          "Plastering and finishing within the agreed scope.",
+          "Walls and outdoor building work."
+        ]
+      },
+      {
+        "heading": "From a single job to several connected trades",
+        "paragraphs": [
+          "We can discuss standalone building work or tasks that sit within a larger renovation. Where the work involves bricklaying, joinery, groundwork or structural steel, the relevant services can be considered together."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Local builders for property improvements",
+        "paragraphs": [
+          "We welcome enquiries in Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and the wider Derbyshire area. Share the location and a brief description so we can assess the work."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I enquire about repairs rather than a large project?",
+        "answer": "Yes. Repairs and general building work are part of our scope. Suitability and availability are assessed for each job."
+      },
+      {
+        "question": "Can you remove or alter an internal wall?",
+        "answer": "We can discuss structural alterations, but the design and any required approvals must be established before work is agreed."
+      }
+    ],
+    "related": [
+      "bricklaying",
+      "restoration-renovation",
+      "steel-erection"
+    ]
+  },
+  "groundworks": {
+    "title": "Groundworks",
+    "seo_title": "Groundworks in Belper & Derbyshire | QB Groundworks",
+    "description": "QB Groundworks provides foundations, patios, landscaping, drainage and driveways across Belper and Derbyshire. Discuss your site and external works.",
+    "heading": "Groundworks in Belper and Derbyshire",
+    "card": "QB Groundworks: foundations, drainage, patios, landscaping and driveways.",
+    "short_intro": "QB Groundworks is the dedicated groundworks division of QB Building Solutions. We cover the early stages of building work and the outdoor spaces around a property.",
+    "image": "groundworks",
+    "image_alt": "Excavated ground and drainage beside a house",
+    "banner": "groundworks",
+    "sections": [
+      {
+        "heading": "An integral part of the build",
+        "paragraphs": [
+          "Foundations and drainage affect everything that follows. Our separate groundworks division gives us greater control over this stage and how it connects to the building teams. We also welcome enquiries for standalone external works."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Our groundworks services",
+        "paragraphs": [],
+        "items": [
+          "Foundations: Groundwork for new builds, extensions and other structures, based on the required design and site assessment.",
+          "Patios: Preparation and construction of usable outdoor areas, with the finish and layout agreed for your property.",
+          "Landscaping: Practical changes to outdoor spaces, coordinated with associated groundwork.",
+          "Drainage: Drainage work for building projects and property improvements, with requirements assessed for the site.",
+          "Driveways: Ground preparation and driveway work, with access, drainage and proposed materials discussed before agreement."
+        ]
+      },
+      {
+        "heading": "Understanding your site",
+        "paragraphs": [
+          "Access, levels, ground conditions and existing services can affect the approach. Tell us what the work is for and whether it supports a new build, extension or external improvement. We'll discuss the information needed to assess the job."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Groundworks across Derbyshire",
+        "paragraphs": [
+          "We serve Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire. For demolition or clearance before construction, see QB Demolition."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do you undertake patios and driveways as well as foundations?",
+        "answer": "Yes. Patios, driveways, landscaping and drainage are part of the division's scope, alongside foundations."
+      },
+      {
+        "question": "Can groundworks be discussed with an extension?",
+        "answer": "Yes. We can consider the groundwork and extension construction together, with responsibilities and scope agreed for the project."
+      }
+    ],
+    "related": [
+      "extensions",
+      "new-builds",
+      "demolition"
+    ]
+  },
+  "kitchens": {
+    "title": "Kitchens",
+    "seo_title": "Kitchen Fitting in Belper & Derbyshire | QB Building Solutions",
+    "description": "Kitchen fitting and associated building work in Belper, Duffield, Allestree and Derbyshire. Discuss your kitchen installation or extension with QB.",
+    "heading": "Kitchen fitting in Belper and Derbyshire",
+    "card": "Kitchen installations and associated joinery, with building alterations discussed where needed.",
+    "short_intro": "A new kitchen can involve fitting within the existing room or changing the space around it. QB Building Solutions welcomes kitchen enquiries in Belper, Duffield, Allestree and across Derbyshire.",
+    "image": "joinery",
+    "image_alt": "Kitchen with fitted cupboards and timber flooring",
+    "banner": null,
+    "sections": [
+      {
+        "heading": "Start with the kitchen you want to use",
+        "paragraphs": [
+          "Tell us about the layout, the kitchen you have selected and the changes you want to make. We'll discuss the installation work and whether the project also needs joinery, structural alterations or an extension."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Kitchen work we can discuss",
+        "paragraphs": [],
+        "items": [
+          "Kitchen fitting and installation.",
+          "Associated carpentry and joinery.",
+          "Building alterations around the proposed layout.",
+          "Renovation work within the kitchen space.",
+          "Kitchen extensions and the construction needed to create more room.",
+          "Coordination of specialist trades where included in the agreed scope."
+        ]
+      },
+      {
+        "heading": "Fitting a kitchen or changing the room?",
+        "paragraphs": [
+          "Replacing units is a different scope from creating an open-plan kitchen or extending the house. Establishing that difference early helps identify the design, structural information and trades required. Any electrical, gas or plumbing work must be assigned to appropriately competent trades and agreed explicitly; it is not automatically included."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Your next step",
+        "paragraphs": [
+          "Contact us with the property location, any kitchen plans and a description of the building work you expect. Our service area also includes Quarndon, Derby, Ashbourne and wider Derbyshire."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do I need to have chosen the kitchen?",
+        "answer": "You can enquire before choosing it. Detailed layouts and product information may be required to quote accurately for fitting."
+      },
+      {
+        "question": "Can you discuss an extension as part of the kitchen project?",
+        "answer": "Yes. Kitchen extensions and installation can be considered together, with the design and construction scope agreed separately where needed."
+      }
+    ],
+    "related": [
+      "joinery",
+      "extensions",
+      "general-building"
+    ]
+  },
+  "orangeries": {
+    "title": "Orangeries",
+    "seo_title": "Orangery Builders in Derbyshire | QB Building Solutions",
+    "description": "Discuss orangery building work in Belper, Duffield, Allestree, Quarndon and Derbyshire with QB Building Solutions, from groundwork to agreed finishes.",
+    "heading": "Orangery building work in Derbyshire",
+    "card": "Orangery construction to create additional living space connected to your home.",
+    "short_intro": "An orangery can create a new place to relax, dine or spend time together. We welcome enquiries for orangery building work across Belper and Derbyshire.",
+    "image": null,
+    "image_alt": "",
+    "banner": null,
+    "sections": [
+      {
+        "heading": "Space shaped around your property",
+        "paragraphs": [
+          "The proposed layout, glazing and relationship to the existing house influence how an orangery is built. We discuss your plans and the construction requirements so the scope reflects the property and the intended use."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Stages to discuss",
+        "paragraphs": [],
+        "items": [
+          "Site preparation and foundations.",
+          "Brickwork and the main building structure.",
+          "Openings and connections to the existing home.",
+          "Roof and glazing requirements in the proposed design.",
+          "Joinery and internal finishing work within the agreed scope."
+        ]
+      },
+      {
+        "heading": "Plan the details before construction",
+        "paragraphs": [
+          "Planning requirements, building regulations and structural details depend on the proposal. Tell us which drawings and professional advice you already have. We can discuss how the building work will fit around the approved design and specialist components."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Local orangery enquiries",
+        "paragraphs": [
+          "We serve Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire. Contact us with the location and outline plans."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can an orangery be part of a wider renovation?",
+        "answer": "Yes. We can discuss how the additional space connects to changes elsewhere in your property."
+      },
+      {
+        "question": "Are glazing products or design services automatically included?",
+        "answer": "No. Product supply, design and specialist installation responsibilities must be established in the project scope."
+      }
+    ],
+    "related": [
+      "extensions",
+      "groundworks",
+      "joinery"
+    ]
+  },
+  "steel-erection": {
+    "title": "Steel Erection",
+    "seo_title": "Steel Erection in Derbyshire | QB Building Solutions",
+    "description": "Discuss structural steel erection for building projects in Belper and Derbyshire with QB Building Solutions. Scope assessed against design and site needs.",
+    "heading": "Steel erection for building projects in Derbyshire",
+    "card": "Steel erection within building projects, with the design, access and installation scope assessed first.",
+    "short_intro": "Structural steel can form part of an extension, alteration or new build. QB Building Solutions welcomes enquiries for steel erection across its Derbyshire service area.",
+    "image": null,
+    "image_alt": "",
+    "banner": null,
+    "sections": [
+      {
+        "heading": "Start with the structural requirements",
+        "paragraphs": [
+          "Tell us what the steel is intended to support and which engineer's drawings or specifications are available. The installation approach must reflect the design, existing structure and site conditions."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Details we need to discuss",
+        "paragraphs": [],
+        "items": [
+          "The structural drawings and steel specification.",
+          "Whether the work is part of a new build or an existing property.",
+          "Site access and delivery requirements.",
+          "The relationship to masonry and other construction stages.",
+          "The installation scope and the specialist arrangements required."
+        ]
+      },
+      {
+        "heading": "Clear roles for structural work",
+        "paragraphs": [
+          "Structural design, fabrication, lifting arrangements and erection are distinct responsibilities. We agree what our service includes before work is arranged. Do not assume fabrication, engineering design or every lifting operation is supplied directly by QB."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Working across Derbyshire",
+        "paragraphs": [
+          "We welcome enquiries from Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and the wider county."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can steel work be discussed with an extension?",
+        "answer": "Yes. Share the extension plans and structural details so we can assess the relationship between the steel and the building work."
+      },
+      {
+        "question": "Can you quote without an engineer's specification?",
+        "answer": "Contact us to discuss the stage you have reached. Appropriate design information may be needed before the installation scope and price can be established."
+      }
+    ],
+    "related": [
+      "extensions",
+      "general-building",
+      "new-builds"
+    ]
+  },
+  "restoration-renovation": {
+    "title": "Restoration & Renovation",
+    "seo_title": "Restoration & Renovation in Derbyshire | QB Building Solutions",
+    "description": "Property renovation and restoration building work in Belper, Duffield, Allestree, Quarndon and Derbyshire. Discuss repairs and improvements with QB.",
+    "heading": "Restoration and renovation building work in Derbyshire",
+    "card": "Building work to repair, restore and improve existing properties, with scope shaped around their condition.",
+    "short_intro": "Working with an existing property starts with understanding what is already there. QB Building Solutions carries out restoration and renovation building work across Belper and Derbyshire.",
+    "image": null,
+    "image_alt": "",
+    "banner": null,
+    "sections": [
+      {
+        "heading": "Improve the property you already have",
+        "paragraphs": [
+          "You may want to repair worn areas, change a layout or bring several improvements together. We discuss the existing condition, your priorities and the work needed to achieve them."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Work we can discuss",
+        "paragraphs": [],
+        "items": [
+          "Building repairs and restoration work.",
+          "Brickwork and masonry repairs.",
+          "Internal alterations, subject to the required design.",
+          "Joinery and finishing work.",
+          "Kitchen improvements and installation.",
+          "Coordination of related trades within the agreed renovation scope."
+        ]
+      },
+      {
+        "heading": "Allow for what an existing building may reveal",
+        "paragraphs": [
+          "Hidden conditions can affect renovation work. The initial scope should make clear what is known, what needs further assessment and how proposed changes will be discussed. If a property is listed or protected, the relevant advice and permissions must be established; this page does not claim specialist conservation accreditation."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Discuss a renovation near you",
+        "paragraphs": [
+          "We serve Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire. Tell us which areas need attention and whether drawings or surveys are available."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can several improvements be planned together?",
+        "answer": "Yes. Describe the full set of changes so we can discuss the sequence and which trades may be required."
+      },
+      {
+        "question": "Do you guarantee that no further work will be found?",
+        "answer": "No. Existing buildings may reveal conditions during assessment or construction. Any resulting scope changes need to be discussed and agreed."
+      }
+    ],
+    "related": [
+      "general-building",
+      "bricklaying",
+      "joinery",
+      "kitchens"
+    ]
+  },
+  "demolition": {
+    "title": "Demolition",
+    "seo_title": "Demolition & Site Clearance in Derbyshire | QB Demolition",
+    "description": "Contact QB Demolition about demolition, site clearance and asbestos-related requirements in Belper and Derbyshire. Scope and specialist provision assessed.",
+    "heading": "Demolition and site clearance in Derbyshire",
+    "card": "QB Demolition: demolition and site clearance, with asbestos-related enquiries assessed for appropriate specialist provision.",
+    "short_intro": "QB Demolition is the dedicated demolition division of QB Building Solutions. We welcome enquiries for demolition, site clearance, asbestos removal and asbestos disposal across Derbyshire.",
+    "image": null,
+    "image_alt": "",
+    "banner": null,
+    "sections": [
+      {
+        "heading": "Prepare the site for its next use",
+        "paragraphs": [
+          "Removing an existing structure or clearing a site needs an agreed scope and an understanding of the conditions. Tell us about the property, access and proposed next stage so we can discuss what assessment and work may be required."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Our enquiry scope",
+        "paragraphs": [],
+        "items": [
+          "Demolition of existing structures, subject to assessment.",
+          "Site clearance ahead of building or external works.",
+          "Coordination with groundworks for the next stage.",
+          "Asbestos removal enquiries.",
+          "Asbestos disposal enquiries."
+        ]
+      },
+      {
+        "heading": "Asbestos removal and disposal enquiries",
+        "paragraphs": [
+          "If asbestos is known or suspected, mention it when contacting us. The material, survey information and proposed work must be assessed before suitable qualified provision can be established. Do not disturb suspected asbestos yourself. Removal and disposal arrangements depend on the specific work and applicable requirements."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Demolition enquiries across Derbyshire",
+        "paragraphs": [
+          "We serve Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire. Provide the location, the structure or area involved and any existing survey information."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can site clearance be discussed with a new build?",
+        "answer": "Yes. We can discuss how demolition or clearance connects to the groundwork and construction stages."
+      },
+      {
+        "question": "What should I tell you about possible asbestos?",
+        "answer": "Mention any known or suspected asbestos and any survey information already available. The appropriate next step must be established before work is agreed."
+      }
+    ],
+    "related": [
+      "groundworks",
+      "new-builds",
+      "general-building"
+    ]
+  }
 }

@@ -1,42 +1,24 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Faqs from '../../components/Faqs.astro';
+import ServiceCards from '../../components/ServiceCards.astro';
 import services from '../../data/services.json';
-
-export function getStaticPaths() {
-  return Object.entries(services).map(([slug, service]) => ({
-    params: { service: slug },
-    props: { service }
-  }));
-}
-
+import SiteImage from '../../components/SiteImage.astro';
+import { href } from '../../lib/urls';
+export function getStaticPaths() { return Object.entries(services).map(([slug,service])=>({params:{service:slug},props:{service}})); }
 const { service } = Astro.props;
-const { service: slug } = Astro.params;
+const [introduction, scope, ...details] = service.sections;
 ---
-
-<BaseLayout title={service.title} description={service.title} menu="services">
-    <div class="hero">
-        <div class="image">
-            <img src={`https://pitfielddigital.github.io/qb-building-solutions/images/banners/${slug}.png`} alt={service.title}>
-        </div>
-        <div class="content">
-            <div class="text">{service.title}</div>
-            <hr class="hero-break">
-            <div class="subtext">{service.short_intro}</div>
-        </div>
-    </div>
-    <section>
-        <div class="row row-2">
-            <div class="column">
-                <h2 class="text-heading">{service.title}</h1>
-                <div set:html={service.page_content} />
-                <div class="spacer-35"></div>
-                <a class="button btn btn-red" href="https://pitfielddigital.github.io/qb-building-solutions/contact">GET A QUOTE</a>
-            </div>
-            <div class="column">
-                <div class="image">
-                    <img src={`https://pitfielddigital.github.io/qb-building-solutions/images/${slug}.png`} alt={service.title} width="100%">
-                </div>
-            </div>
-        </div>
-    </section>
+<BaseLayout title={service.seo_title} description={service.description} menu="services" service={{name:service.title,description:service.card}}>
+  <Hero eyebrow={service.title} heading={service.heading} intro={service.short_intro} banner={service.banner}><a class="btn btn-red" href={href('/contact/')}>Discuss your project</a><a class="hero-link" href="tel:+447464214327">Call 07464 214327</a></Hero>
+  <nav class="breadcrumbs section-inner" aria-label="Breadcrumb"><a href={href('/')}>Home</a><span aria-hidden="true">/</span><a href={href('/services/')}>Services</a><span aria-hidden="true">/</span><span aria-current="page">{service.title}</span></nav>
+  <section><div class:list={['section-inner','row','row-2',{'text-introduction':!service.image}]}>
+    <div class="column prose"><p class="text-heading">The right start</p><h2>{introduction.heading}</h2>{introduction.paragraphs.map(p=><p>{p}</p>)}<a class="btn btn-white-red" href={href('/contact/')}>Request a quote</a></div>
+    {service.image && <div class="column image feature-image"><SiteImage path={service.image} alt={service.image_alt} /></div>}
+  </div></section>
+  <section class="grey"><div class="section-inner"><p class="text-heading">Service scope</p><h2>{scope.heading}</h2>{scope.paragraphs.map(p=><p class="section-intro">{p}</p>)}<ul class="scope-grid">{scope.items.map((item,index)=><li><span class="scope-number" aria-hidden="true">{String(index+1).padStart(2,'0')}</span><span>{item}</span></li>)}</ul></div></section>
+  <section><div class="section-inner grid grid-2 detail-grid">{details.map(section=><div class="prose"><h2>{section.heading}</h2>{section.paragraphs.map(p=><p>{p}</p>)}</div>)}</div></section>
+  <Faqs items={service.faqs} />
+  <section><div class="section-inner"><p class="text-heading">Connected services</p><h2>Other work your project may need</h2><ServiceCards slugs={service.related} images={false} columns={service.related.length===4?4:3} /></div></section>
 </BaseLayout>

@@ -1,0 +1,18 @@
+---
+import services from '../data/services.json';
+import SiteImage from './SiteImage.astro';
+import { href } from '../lib/urls';
+interface Props { slugs: string[]; columns?: number; images?: boolean; }
+const { slugs, columns = 3, images = true } = Astro.props;
+type Service = (typeof services)[keyof typeof services];
+const data: Record<string, Service> = services;
+---
+<div class={`grid grid-${columns} service-cards`}>
+  {slugs.map(slug => {
+    const service = data[slug];
+    return <a class:list={['card', { 'text-card': !images || !service.image }]} href={href(`/services/${slug}/`)}>
+      {images && service.image && <div class="image"><SiteImage path={service.image} alt={service.image_alt} card /></div>}
+      <div class="content"><h3 class="title">{service.title}</h3><p class="card-text">{service.card}</p><span class="card-button">Explore {service.title.toLowerCase()} <span aria-hidden="true">→</span></span></div>
+    </a>;
+  })}
+</div>

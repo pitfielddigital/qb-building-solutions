@@ -1,0 +1,13 @@
+---
+import SiteImage from './SiteImage.astro';
+interface Props { eyebrow: string; heading: string; intro?: string; banner?: string | null; }
+const { eyebrow, heading, intro, banner } = Astro.props;
+---
+<div class:list={['hero', { 'hero-text': !banner }]}>
+  {banner && <div class="image"><SiteImage path={`banners/${banner}`} alt="" hero /></div>}
+  <div class="content">
+    <p class="text-heading">{eyebrow}</p><h1 class="text">{heading}</h1><hr class="hero-break" />
+    {intro && <p class="subtext">{intro}</p>}
+    {Astro.slots.has('default') && <div class="actions"><slot /></div>}
+  </div>
+</div>

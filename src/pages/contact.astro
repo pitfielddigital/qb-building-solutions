@@ -1,85 +1,14 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import pages from '../data/pages.json';
+import { href } from '../lib/urls';
 ---
-
-<BaseLayout title="Contact Us" description="Contact Us" menu="contact">
-    <div class="hero">
-        <div class="image">
-            <img src="https://pitfielddigital.github.io/qb-building-solutions/images/banners/contact.png" alt="QB Building Solutions Contact Us Banner">
-        </div>
-        <div class="content">
-            <h1 class="text-heading">Contact Us</h1>
-            <div class="text">Get in Touch</div>
-            <hr class="hero-break">
-            <div class="subtext">Get in touch today to discuss your project. We're here to help and happy to provide a fre, no obligation quote.</div>
-        </div>
-    </div>
-    <section>
-        <div class="row row-2 bordered">
-            <div class="column item">
-                <h2 class="section-heading">Send us a message</h2>
-                <p class="page-text">Fill out the form below and we'll get back to you as soon as possible</p>
-                <div class="spacer-35"></div>
-                <form>
-                    <input type="text" placeholder="Your Name *" required>
-                    <input type="email" placeholder="Email Address *" required>
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Your Message *" required></textarea>
-                    <button class="btn btn-red" type="submit">SEND MESSAGE</button>
-                </form>
-            </div>
-            <div class="column item">
-                <h2 class="section-heading">Contact Information</h2>
-                <div class="spacer-10"></div>
-                <div class="contact-information-item">
-                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                    <div class="information">
-                        <div class="title">07464 214327</div>
-                        <p class="info-text">Call us today</p>
-                    </div>
-                </div>
-                <div class="spacer-25"></div>
-                <div class="contact-information-item">
-                    <div class="icon"><i class="fa-regular fa-envelope"></i></div>
-                    <div class="information">
-                        <div class="title">Info@qbbuildingsolutions.com</div>
-                        <p class="info-text">Email us anytime</p>
-                    </div>
-                </div>
-                <div class="spacer-25"></div>
-                <div class="contact-information-item">
-                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div class="information">
-                        <div class="title">Belper, Derbyshire</div>
-                        <p class="info-text">Proud to serve Belper, Derby and surrounding areas</p>
-                    </div>
-                </div>
-                <div class="spacer-25"></div>
-                <div class="contact-information-item">
-                    <div class="icon"><i class="fa-regular fa-clock"></i></div>
-                    <div class="information">
-                        <div class="title">Mon - Fri : 8:00AM - 5:00PM</div>
-                        <p class="info-text">
-                            Saturday: By Appointment
-                            <br>Sunday: Closed
-                        </p>
-                    </div>
-                </div>
-                <div class="spacer-25"></div>
-                <div class="information-block">
-                    <div class="icon"><i class="fa-regular fa-file-lines"></i></div>
-                    <div class="information">
-                        <div class="title">Free, No Obligation Quotes</div>
-                        <p class="info-text">
-                            We'll visit your site, discuss your needs and provide you a detailed quote.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36544.03852943626!2d-1.5134653370869597!3d53.027399554927946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48798ac30726b81b%3A0x10fdcfb40718dd3b!2sBelper!5e1!3m2!1sen!2suk!4v1783503395568!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </div>
+<BaseLayout {...pages.contact} menu="contact">
+  <Hero {...pages.contact} banner="contact" />
+  <section><div class="section-inner row row-2 contact-layout">
+    <div class="column prose"><p class="text-heading">Project enquiries</p><h2>Tell us what you need</h2><p>Please include the property location, the type of work and any useful details about your plans. If you already have drawings, mention them in your message; we can discuss how to share them by email.</p><p>To discuss your project, please call or email our team using the details below.</p><div class="actions"><a class="btn btn-red" href="mailto:info@qbbuildingsolutions.com">Email our team</a><a class="btn btn-white-red" href="tel:+447464214327">Call 07464 214327</a></div><p class="small-text">Describe the work you are considering and any timing requirements. Please avoid including sensitive personal information.</p><p class="small-text">We use your details to respond to your enquiry and discuss your project. Read our <a href={href('/privacy-policy/')}>Privacy Policy</a>.</p></div>
+    <aside class="column contact-panel"><h2>Contact details</h2><dl><div><dt>Call our team</dt><dd><a href="tel:+447464214327">07464 214327</a></dd></div><div><dt>Email your enquiry</dt><dd><a href="mailto:info@qbbuildingsolutions.com">info@qbbuildingsolutions.com</a></dd></div><div><dt>Our service area</dt><dd>Belper, Derbyshire</dd></div></dl><p>Serving Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire.</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Belper%2C%20Derbyshire" rel="noreferrer">View Belper on Google Maps <span aria-hidden="true">↗</span></a></aside>
+  </div></section>
+  <section class="grey"><div class="section-inner prose"><p class="text-heading">From enquiry to quote</p><h2>What happens next?</h2><p>We'll review your enquiry and discuss the proposed work. Depending on the project, we may need drawings, further information or a site visit before preparing a quote. Availability, scope and timescales are agreed for each project.</p></div></section>
 </BaseLayout>

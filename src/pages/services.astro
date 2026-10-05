@@ -1,91 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import pages from '../data/pages.json';
+import { href } from '../lib/urls';
 ---
-
-<BaseLayout title="Services" description="Services" menu="services">
-    <div class="hero">
-        <div class="image">
-            <img src="https://pitfielddigital.github.io/qb-building-solutions/images/banners/services.png" alt="QB Building Solutions Homepage Banner">
-        </div>
-        <div class="content">
-            <h1 class="text-heading">SERVICES</h1>
-            <div class="text">We cover all aspects of building work</div>
-            <hr class="hero-break">
-            <div class="subtext">From small repairs to complete new builds, we provide a comprehensive range of building services across Belper, Derby and the surrounding Derbyshire areas.</div>
-        </div>
-    </div>
-    <section>
-        <div class="grid grid-3">
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/bricklaying">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/bricklaying.png" alt="Bricklaying" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">Bricklaying</div>
-                    <p class="card-text">High quality brickwork for new builds, extensions, garden walls and more.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/joinery">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/joinery.png" alt="Joinery" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">Joinery</div>
-                    <p class="card-text">Bespoke carpentry and joinery services, from doors to kitchen installations.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/site-management">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/site-management.png" alt="Site Management" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">Site Management</div>
-                    <p class="card-text">Professional site management to ensure your project runs smoothly.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/extensions">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/extensions.png" alt="Extensions" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">Extensions</div>
-                    <p class="card-text">Single and double story extensions to create the ectra space you need. We manage the whole process from design to completion.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/new-builds">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/new-builds.png" alt="New Builds" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">New Builds</div>
-                    <p class="card-text">Complete new build homes build to the highest standards. We work you every step of the way to create your dream home.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/general-building">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/general-building.png" alt="General Building" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">General Building</div>
-                    <p class="card-text">From minor repairs to full renovations, we cover all aspects of building.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/groundworks">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/groundworks.png" alt="Groundworks" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">Groundworks</div>
-                    <p class="card-text">Professional groundwork services including foundations, drainage, site preparation and excavation for projects of all sizes.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-        </div>
-    </section>
+<BaseLayout {...pages.services} menu="services">
+  <Hero {...pages.services} banner="services" />
+  <section><div class="section-inner"><p class="text-heading">QB Building Solutions</p><h2>Building, alterations and finishing</h2><ServiceCards slugs={['bricklaying','joinery','extensions','new-builds','general-building','kitchens','orangeries','steel-erection','restoration-renovation','site-management']} /></div></section>
+  <section class="grey"><div class="section-inner"><p class="text-heading">Our dedicated divisions</p><h2>Groundworks and demolition divisions</h2><p class="section-intro">Building work often starts before the first brick is laid. QB Groundworks covers foundations, drainage and external works. QB Demolition covers demolition and site clearance, with asbestos-related enquiries assessed for suitable specialist provision.</p><ServiceCards slugs={['groundworks','demolition']} columns={2} images={false} /></div></section>
+  <section><div class="section-inner grid grid-2 detail-grid"><div class="prose"><h2>Where we work</h2><p>Our service area includes Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire. Availability and suitability depend on the type of work and site requirements. Contact us with your location and project details.</p></div><div class="prose work-callout"><h2>Not sure which service you need?</h2><p>You don't need to choose the trade before getting in touch. Describe the result you want, and we'll discuss the work involved and which teams may be needed.</p><a class="btn btn-red" href={href('/contact/')}>Discuss your project</a></div></div></section>
 </BaseLayout>

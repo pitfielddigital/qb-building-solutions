@@ -1,56 +1,16 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import pages from '../data/pages.json';
+import { href } from '../lib/urls';
+const links = [
+  ['Home','Get to know QB Building Solutions and the work we do.','/'],
+  ['Our services','Find building, joinery, groundworks and demolition services.','/services/'],
+  ['Projects','Ask about examples of work relevant to your plans.','/projects/'],
+  ['Contact','Speak to our team about your project.','/contact/'],
+];
 ---
-
-<BaseLayout title="Page Not Found">
-    <div class="hero">
-        <div class="image">
-            <img src="https://pitfielddigital.github.io/qb-building-solutions/images/banners/404.png" alt="QB Building Solutions Homepage Banner">
-        </div>
-        <div class="content">
-            <h1 class="error-code-text">4<span>0</span>4</h1>
-            <div class="text">Page Not Found</div>
-            <hr class="hero-break">
-            <div class="subtext">Sorry, we can't find the page you're looking for. It may have been moved, deleted, or the link may be incorrect.</div>
-            <a class="btn btn-red" href="https://pitfielddigital.github.io/qb-building-solutions/">RETURN HOME</a>
-        </div>
-    </div>
-    <section class="center">
-        <h3 class="standout">Need help finding something?</h3>
-        <div class="spacer-35"></div>
-        <div class="grid grid-4 error-cards">
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/">
-                <div class="icon"><i class="fa-solid fa-house"></i></div>
-                <div class="title">Go to Homepage</div>
-                <p class="page-text">Return to main page and start again.</p>
-                <div class="go">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services">
-                <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                <div class="title">Our Services</div>
-                <p class="page-text">Explore the full range of building services we offer.</p>
-                <div class="go">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/projects">
-                <div class="icon"><i class="fa-solid fa-city"></i></div>
-                <div class="title">View Projects</div>
-                <p class="page-text">See examples of our recent building projects.</p>
-                <div class="go">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/contact">
-                <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                <div class="title">Contact Us</div>
-                <p class="page-text">Get in touch with our friendly team today.</p>
-                <div class="go">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </a>
-        </div>
-    </section>
+<BaseLayout {...pages.error} noindex>
+  <Hero {...pages.error} banner="404"><a class="btn btn-red" href={href('/')}>Return home</a></Hero>
+  <section><div class="section-inner"><h2>Where would you like to go?</h2><div class="grid grid-4 service-cards">{links.map(([title,text,url])=><a class="card text-card" href={href(url)}><div class="content"><h3 class="title">{title}</h3><p class="card-text">{text}</p><span class="card-button">Explore <span aria-hidden="true">→</span></span></div></a>)}</div></div></section>
 </BaseLayout>

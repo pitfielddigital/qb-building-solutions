@@ -1,54 +1,37 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import site from "../content/site.json";
-
-const { title, description, menu } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import site from '../content/site.json';
+import '../styles/global.css';
+import { href, canonicalUrl, siteOrigin } from '../lib/urls';
+interface Props { title: string; description: string; menu?: string; noindex?: boolean; service?: { name: string; description: string }; }
+const { title, description, menu, noindex = false, service } = Astro.props;
+const canonical = canonicalUrl(Astro.url.pathname);
+const preview = import.meta.env.DEV || import.meta.env.PUBLIC_SITE_PREVIEW === 'true' || import.meta.env.BASE_URL !== '/';
+const graph: Record<string, unknown>[] = [{
+  '@type': 'Organization', '@id': `${siteOrigin}/#organization`, name: site.siteName,
+  url: `${siteOrigin}/`, logo: `${siteOrigin}/images/logo.png`, telephone: '+447464214327', email: 'info@qbbuildingsolutions.com',
+  areaServed: ['Belper', 'Duffield', 'Allestree', 'Quarndon', 'Derby', 'Ashbourne', 'Derbyshire'],
+}];
+if (service) graph.push({ '@type': 'Service', '@id': `${canonical}#service`, name: service.name,
+  description: service.description, url: canonical, provider: { '@id': `${siteOrigin}/#organization` },
+  areaServed: ['Belper', 'Duffield', 'Allestree', 'Quarndon', 'Derby', 'Ashbourne', 'Derbyshire'],
+});
 ---
-
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://pitfielddigital.github.io/qb-building-solutions/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <meta property="og:url" content="https://qbbuildingsolutions.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="QB Building Solutions." />
-    <meta property="og:image" content="https://qbbuildingsolutions.com/images/home-banner.jpg" />
-    <meta property="og:title" content="QB Building Solutions" />
-    <meta property="og:site_name" content="QB Building Solutions" />
-    <link rel="stylesheet" href="https://pitfielddigital.github.io/qb-building-solutions/styles/global.css" />
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "QB Building Solutions",
-    "url": "https://qbbuildingsolutions.com",
-    }
-    </script>
-    <title>{title ? `${title} | ${site.siteName}` : site.siteName}</title>
-    <meta name="description" content={description}>
-</head>
-<body data-menu={menu}>
-    <Header />
-    <main>
-        <slot />
-    </main>
-    <Footer />
-</body>
-<script>
-    const body = document.body;
-    const nav = document.getElementById('header_nav');
-    const navItems = nav.querySelectorAll('.item');
-
-    const selectedMenu = body.dataset.menu;
-
-    navItems.forEach((item) => {
-        if (item.dataset.url === selectedMenu) {
-            item.classList.add('selected');
-        }
-    });
-</script>
-</html>
+<html lang="en-GB"><head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title><meta name="description" content={description} />
+  <meta name="robots" content={noindex || preview ? 'noindex, follow' : 'index, follow'} />
+  <link rel="canonical" href={canonical} /><link rel="icon" href={href('/icons/favicon.svg')} type="image/svg+xml" />
+  <meta name="theme-color" content="#d91c32" /><meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta property="og:url" content={canonical} /><meta property="og:type" content="website" />
+  <meta property="og:title" content={title} /><meta property="og:description" content={description} />
+  <meta property="og:site_name" content={site.siteName} /><meta property="og:locale" content="en_GB" />
+  <meta property="og:image" content={`${siteOrigin}/images/banners/homepage.png`} /><meta property="og:image:alt" content="QB Building Solutions" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')} />
+</head><body>
+  <a class="skip-link" href="#main-content">Skip to content</a><Header menu={menu} />
+  <main id="main-content" tabindex="-1"><slot /></main><Footer />
+</body></html>

@@ -1,70 +1,18 @@
+---
+import { href } from '../lib/urls';
+import services from '../data/services.json';
+const links = [['/', 'Home'], ['/about/', 'About'], ['/services/', 'Services'], ['/projects/', 'Projects'], ['/contact/', 'Contact'], ['/privacy-policy/', 'Privacy Policy']];
+---
 <footer>
-    <div class="footer-contact">
-        <section>
-            <div class="ready-to-start">
-                <div class="icon">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="text">
-                    <p class="title">Ready to start your project?</p>
-                    <p class="subtitle">Get in touch today for a free, no obligation quote.</p>
-                </div>
-            </div>
-            <div class="get-in-touch">
-                <a class="btn btn-white">GET IN TOUCH</a>
-            </div>
-        </section>
-    </div>
-    <div class="footer-main">
-        <section>
-            <div class="col lg">
-                <div class="logo">
-                    <a href="https://pitfielddigital.github.io/qb-building-solutions/"><img src="https://pitfielddigital.github.io/qb-building-solutions/images/logo.png" alt="QB Building Solutions Logo" width="100%"></a>
-                </div>
-                <p class="page-text">A reliable, professional and friendly team with a passion for building.</p>
-                <div class="socials">
-                    <a href="https://pitfielddigital.github.io/qb-building-solutions/facebook" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://pitfielddigital.github.io/qb-building-solutions/instagram" class="icon"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://pitfielddigital.github.io/qb-building-solutions/mail" class="icon"><i class="fa-regular fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="col sm">
-                <p class="title">QUICK LINKS</p>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/">Home</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/about">About</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/services">Serices</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/projects">Projects</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/contact">Contact</a>
-            </div>
-            <div class="col sm">
-                <p class="title">SERVICES</p>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/bricklaying">Bricklaying</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/joinery">Joinery</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/site-management">Site Management</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/general-building">General Building</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/extensions">Extensions</a>
-                <a href="https://pitfielddigital.github.io/qb-building-solutions/new-builds">New Builds</a>
-            </div>
-            <div class="col lg">
-                <p class="title">CONTACT US</p>
-                <div class="contact-item">
-                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                    <text>07464 214327</text>
-                </div>
-                <div class="contact-item">
-                    <div class="icon"><i class="fa-regular fa-envelope"></i></div>
-                    <text>Info@qbbuildingsolutions.com</text>
-                </div>
-                <div class="contact-item">
-                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <text>Belper, Derbyshire</text>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="footer-copyright">
-        <section>
-            <p>© {new Date().getFullYear()} QB Building Solutions. All rights reserved. | Website by Pitfield Digital</p>
-        </section>
-    </div>
+  <div class="footer-contact"><div class="section-inner footer-cta">
+    <div class="ready-to-start"><div class="text"><h2>Tell us what you want to build.</h2><p>Whether you have drawings ready or are still exploring your options, tell us about your property, location and the work you have in mind. We'll discuss the next step and what we need to prepare a quote.</p></div></div>
+    <a class="btn btn-white" href={href('/contact/')}>Discuss your project <span aria-hidden="true">→</span></a>
+  </div></div>
+  <div class="footer-main"><div class="section-inner footer-columns">
+    <div class="col lg"><a class="logo" href={href('/')}><img src={href('/images/logo.png')} alt="QB Building Solutions home" width="100" height="135" loading="lazy" /></a><p>Building, joinery and brickwork across Belper and Derbyshire, supported by our QB Groundworks and QB Demolition divisions.</p></div>
+    <nav class="col sm" aria-label="Footer navigation"><h2 class="title">Quick links</h2>{links.map(([url,label])=><a href={href(url)}>{label}</a>)}</nav>
+    <nav class="col sm" aria-label="Service navigation"><h2 class="title">Services</h2>{Object.entries(services).map(([slug,service])=><a href={href(`/services/${slug}/`)}>{slug==='groundworks'?'QB Groundworks':slug==='demolition'?'QB Demolition':service.title}</a>)}</nav>
+    <div class="col lg"><h2 class="title">Contact us</h2><a href="tel:+447464214327">07464 214327</a><a href="mailto:info@qbbuildingsolutions.com">info@qbbuildingsolutions.com</a><p>Belper, Derbyshire</p><p>Serving Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and the wider Derbyshire area.</p></div>
+  </div></div>
+  <div class="footer-copyright"><p>© {new Date().getFullYear()} QB Building Solutions. All rights reserved. <span>Website by Pitfield Digital</span></p></div>
 </footer>

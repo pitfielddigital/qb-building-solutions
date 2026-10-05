@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import pages from '../data/pages.json';
+import { href } from '../lib/urls';
+---
+<BaseLayout {...pages.projects} menu="projects" noindex>
+  <Hero {...pages.projects}><a class="btn btn-red" href={href('/contact/')}>Ask about our work</a></Hero>
+  <section><div class="section-inner prose"><p class="text-heading">Your plans</p><h2>Looking for a similar project?</h2><p>Tell us whether you are planning an extension, new build, kitchen, renovation or external work. We can discuss which examples are available and relevant to your enquiry.</p><a class="btn btn-white-red" href={href('/contact/')}>Ask about our work</a></div></section>
+</BaseLayout>

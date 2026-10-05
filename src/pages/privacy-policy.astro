@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import { Content, getHeadings, frontmatter } from '../content/privacy-policy.md';
+import pages from '../data/pages.json';
+const headings = await getHeadings();
+const draft = frontmatter.status !== 'approved';
+---
+<BaseLayout {...pages.privacy} noindex={draft}>
+  <Hero {...pages.privacy} />
+  <section><div class="section-inner">
+    {draft && <aside class="draft-notice" role="note"><strong>Review draft — not approved for publication</strong><p>This policy is being prepared for review. Highlighted confirmation points require business information before it can be published. Please contact info@qbbuildingsolutions.com with privacy questions.</p></aside>}
+    <div class="policy-layout"><nav aria-label="Privacy policy contents" class="policy-contents"><h2>On this page</h2><ol>{headings.map(({slug,text})=><li><a href={`#${slug}`}>{text.replace(/^\d+\. /,'')}</a></li>)}</ol></nav><article class="prose policy-copy"><Content /></article></div>
+  </div></section>
+</BaseLayout>

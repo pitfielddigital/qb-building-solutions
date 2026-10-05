@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+interface Props { path: string; alt: string; hero?: boolean; card?: boolean; }
+const { path, alt, hero = false, card = false } = Astro.props;
+const images = import.meta.glob<{default: ImageMetadata}>('../../public/images/**/*.png', { eager: true });
+const image = images[`../../public/images/${path}.png`]?.default;
+if (!image) throw new Error(`Unknown site image: ${path}`);
+---
+<Image src={image} alt={alt} format="webp" quality={80}
+  widths={hero ? [640, 960, 1440, 1920] : [320, 640, 960]}
+  sizes={hero ? '100vw' : card ? '(max-width: 480px) 90vw, (max-width: 1100px) 45vw, 30vw' : '(max-width: 700px) 90vw, 45vw'}
+  loading={hero ? 'eager' : 'lazy'} fetchpriority={hero ? 'high' : 'auto'} />

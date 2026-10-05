@@ -1,139 +1,36 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import Faqs from '../components/Faqs.astro';
+import SiteImage from '../components/SiteImage.astro';
+import pages from '../data/pages.json';
+import { href } from '../lib/urls';
+const page = pages.home;
+const values = [
+  ['The right trades','Bricklaying, joinery, groundworks and demolition brought together around the work required.'],
+  ['Clear scope','Discuss the plans, site conditions and priorities before agreeing what the project includes.'],
+  ['Connected stages','Consider how foundations, structural work and finishes affect one another.'],
+  ['Local coverage','A team serving Belper and the surrounding Derbyshire communities.'],
+];
+const faqs = [
+  {question:'Do you work outside Belper?',answer:'Yes. Our service area includes Duffield, Allestree, Quarndon, Derby, Ashbourne and wider Derbyshire. Contact us with the site location to discuss availability and suitability.'},
+  {question:'Can I enquire about a smaller job?',answer:'Yes. Our scope includes walls and general building work as well as larger extensions and new builds. Tell us what is needed so we can assess the job.'},
+  {question:'What should I send with my enquiry?',answer:'Your location, a short description of the work and any drawings you already have are useful starting points. You can email further information after contacting us.'},
+];
 ---
-
-<BaseLayout title="Home" description="Homepage" menu="home">
-    <div class="hero">
-        <div class="image">
-            <img src="https://pitfielddigital.github.io/qb-building-solutions/images/banners/homepage.png" alt="QB Building Solutions Homepage Banner">
-        </div>
-        <div class="content">
-            <h1 class="text-heading">QB BUILDING SOLUTIONS</h1>
-            <div class="text">We offer anything from digging a hole to a new build</div>
-            <hr class="hero-break">
-            <div class="subtext">A reliable, professional and friendly team with a passion for building.</div>
-            <a class="button btn btn-red" href="https://pitfielddigital.github.io/qb-building-solutions/contact">GET A QUOTE</a>
-        </div>
-    </div>
-    <section>
-        <div class="row row-2">
-            <div class="column">
-                <h2 class="text-heading">WELCOME TO QB BUILDING SOLUTIONS</h1>
-                <h3 class="standout">Building Quality. Delivering Trust.</h3>
-                <div class="spacer-35"></div>
-                <p class="page-text">QB Building solutions is a trusted building company based in Belper, Derbyshire. We provide a complete range of building services for domestic and commercial projects, big or small.</p>
-                <div class="spacer-35"></div>
-                <a class="btn btn-white-red" href="https://pitfielddigital.github.io/qb-building-solutions/about">ABOUT US</a>
-            </div>
-            <div class="column">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/homepage-about.png" alt="QB Building Solutions House Project" width="100%">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="grey center">
-        <h2 class="text-heading">OUR SERVICES</h2>
-        <h3 class="standout">From small jobs to large projects, we've got you covered.</h3>
-        <div class="spacer-35"></div>
-        <div class="grid grid-4">
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/bricklaying">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/bricklaying.png" alt="Bricklaying" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">Bricklaying</div>
-                    <p class="card-text">High quality brickwork for new builds, extensions, garden walls and more.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/joinery">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/joinery.png" alt="Joinery" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">Joinery</div>
-                    <p class="card-text">Bespoke carpentry and joinery services, from doors to kitchen installations.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/site-management">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/site-management.png" alt="Site Management" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">Site Management</div>
-                    <p class="card-text">Professional site management to ensure your project runs smoothly.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-            <a class="card" href="https://pitfielddigital.github.io/qb-building-solutions/services/general-building">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/general-building.png" alt="General Building" width="100%">
-                </div>
-                <div class="content">
-                    <div class="title">General Building</div>
-                    <p class="card-text">From minor repairs to full renovations, we cover all aspects of building.</p>
-                    <span class="card-button">LEARN MORE</span>
-                </div>
-            </a>
-        </div>
-        <div class="spacer-35"></div>
-        <a class="btn btn-red" href="https://pitfielddigital.github.io/qb-building-solutions/services">VIEW ALL SERVICES</a>
-    </section>
-    <section class="center">
-        <h2 class="text-heading">RECENT PROJECTS</h2>
-        <h3 class="standout">Take a look at some of our recent work.</h3>
-        <div class="spacer-35"></div>
-        <div class="grid grid-4">
-            <a class="card">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/bricklaying.png" alt="Bricklaying" width="100%">
-                </div>
-            </a>
-            <a class="card">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/joinery.png" alt="Joinery" width="100%">
-                </div>
-            </a>
-            <a class="card">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/site-management.png" alt="Site Management" width="100%">
-                </div>
-            </a>
-            <a class="card">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/general-building.png" alt="General Building" width="100%">
-                </div>
-            </a>
-        </div>
-        <div class="spacer-35"></div>
-        <a class="btn btn-white-red" href="https://pitfielddigital.github.io/qb-building-solutions/projects">VIEW ALL PROJECTS</a>
-    </section>
-    <section class="black center">
-        <h2 class="text-heading">WHY CHOOSE US?</h2>
-        <div class="spacer-35"></div>
-        <div class="grid grid-4 bordered">
-            <div class="item">
-                <div class="icon"><i class="fa-solid fa-award"></i></div>
-                <div class="title">Experienced</div>
-                <p class="item-text">Years of industry experience delivering high quality results.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
-                <div class="title">Reliable</div>
-                <p class="item-text">We pride ourselves on being reliable, professional and easy to work with.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
-                <div class="title">Fully Insured</div>
-                <p class="item-text">We are fully insured for your peace of mind on every project.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fa-solid fa-map-location-dot"></i></div>
-                <div class="title">Local</div>
-                <p class="item-text">Proud to serve Belper, Derby, and the surrounding Derbyshire areas.</p>
-            </div>
-        </div>
-    </section>
+<BaseLayout {...page} menu="home">
+  <Hero {...page} banner="homepage"><a class="btn btn-red" href={href('/contact/')}>Discuss your project</a><a class="hero-link" href={href('/services/')}>View our services <span aria-hidden="true">→</span></a></Hero>
+  <section><div class="section-inner row row-2">
+    <div class="column prose"><p class="text-heading">Welcome to QB Building Solutions</p><h2>Building work, brought together</h2><p>A building project involves more than individual trades. It needs the groundwork, structure and finishing work to fit together. Our bricklayers, joiners, groundworkers and demolition teams support projects from early site preparation through to the work that makes a property ready to use.</p><p>Whether you're extending your home, improving an existing property or planning a new build, we'll discuss the scope and help identify the right next step.</p><a class="btn btn-white-red" href={href('/about/')}>Learn more about our team</a></div>
+    <div class="column feature-image"><SiteImage path="homepage-about" alt="Brick house with gables and a timber porch" /></div>
+  </div></section>
+  <section class="grey"><div class="section-inner"><div class="section-heading-row"><div><p class="text-heading">Our services</p><h2>What can we help you build?</h2></div><a class="text-link" href={href('/services/')}>View all services <span aria-hidden="true">→</span></a></div><ServiceCards slugs={['extensions','bricklaying','joinery','kitchens']} columns={4} /></div></section>
+  <section><div class="section-inner"><p class="text-heading">From the ground up</p><h2>Dedicated divisions for the early stages</h2><div class="grid grid-2 division-grid">
+    <article class="division-card"><p class="division-label">Ground preparation & external works</p><h3>QB Groundworks</h3><p>Foundations, drainage, driveways, patios and landscaping form the base of many projects. Our dedicated groundworks division gives us greater control over this essential stage and how it connects to the building work.</p><a class="text-link" href={href('/services/groundworks/')}>Explore groundworks <span aria-hidden="true">→</span></a></article>
+    <article class="division-card"><p class="division-label">Demolition & site clearance</p><h3>QB Demolition</h3><p>When a project starts with removing an existing structure or clearing a site, our demolition division can discuss the preparation and clearance required. Contact us about demolition and asbestos-related requirements so the scope and appropriate specialist provision can be assessed.</p><a class="text-link" href={href('/services/demolition/')}>Explore demolition <span aria-hidden="true">→</span></a></article>
+  </div></div></section>
+  <section class="black"><div class="section-inner"><p class="text-heading">Why choose us?</p><h2>A practical approach to your project</h2><div class="grid grid-4 values">{values.map(([title,body],index)=><div class="item"><span class="value-number" aria-hidden="true">0{index+1}</span><h3>{title}</h3><p>{body}</p></div>)}</div></div></section>
+  <section><div class="section-inner grid grid-2 detail-grid"><div class="prose"><p class="text-heading">Belper & beyond</p><h2>Building services near you</h2><p>We welcome enquiries from Belper, Duffield, Allestree and Quarndon, as well as Derby, Ashbourne and the wider Derbyshire area. If you're looking for a local builder, bricklayer or joiner, tell us where the property is and what you need. We'll confirm whether the work is suitable for our team.</p><a class="text-link" href={href('/contact/')}>Discuss your project <span aria-hidden="true">→</span></a></div><div class="prose work-callout"><p class="text-heading">Our work</p><h2>See our work</h2><p>Looking for examples of similar work? Ask our team about projects relevant to your plans.</p><a class="btn btn-white-red" href={href('/projects/')}>Find out about our work</a></div></div></section>
+  <Faqs items={faqs} heading="Questions before you get started" />
 </BaseLayout>

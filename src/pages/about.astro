@@ -1,118 +1,30 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import pages from '../data/pages.json';
+import { href } from '../lib/urls';
+const values = [
+  ['Care in the work','Pay attention to the structure, materials and details that shape the finished result.'],
+  ['Straightforward communication','Explain the agreed scope and discuss questions as the work develops.'],
+  ['Practical planning','Consider access, sequencing and the way different trades need to work together.'],
+  ['Respect for your property','Discuss how the site will be used and how work may affect occupied areas.'],
+];
+const process = [
+  ['Discuss','Tell us what you want to achieve, where the property is and what information you already have.'],
+  ['Review','Discuss the drawings, site conditions and work required. Establish whether further specialist input is needed.'],
+  ['Agree','Set out the proposed scope, quote and next steps before construction is arranged.'],
+  ['Build','Coordinate the agreed work and discuss progress, questions and any proposed changes.'],
+];
 ---
-
-<BaseLayout title="About Us" description="About Us" menu="about">
-    <div class="hero">
-        <div class="image">
-            <img src="https://pitfielddigital.github.io/qb-building-solutions/images/banners/homepage.png" alt="QB Building Solutions Homepage Banner">
-        </div>
-        <div class="content">
-            <h1 class="text-heading">ABOUT US</h1>
-            <div class="text">Building Quality, Delivering Trust.</div>
-            <hr class="hero-break">
-            <div class="subtext">QB Building Solutions is a trusted building company based in Belper, Derbyshire. We take pride in delivering high quality building work with a friendly, professional service you can rely on.</div>
-        </div>
-    </div>
-    <section>
-        <div class="row row-2">
-            <div class="column">
-                <h2 class="text-heading">WHO WE ARE</h1>
-                <h3 class="standout">A local team you can trust.</h3>
-                <div class="spacer-35"></div>
-                <p class="page-text">
-                    With years of experience in the building industry, we've build a reputation for quality workmanship, attention to detail, and a commitment to customer satisfaction.
-                    <br><br>
-                    We work with projects of all sizes, from small repairs to complete new builds, always deliver on time, on budget and to the highest standard.
-                </p>
-                <div class="spacer-35"></div>
-                <a class="btn btn-white-red" href="https://pitfielddigital.github.io/qb-building-solutions/contact">GET IN TOUCH</a>
-            </div>
-            <div class="column">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/about-us.png" alt="About Us" width="100%">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="grey center">
-        <h2 class="text-heading">OUR VALUES</h2>
-        <h3 class="standout">What we stand for</h3>
-        <div class="spacer-35"></div>
-        <div class="grid grid-4 bordered">
-            <div class="item">
-                <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                <div class="title">Quality Workmanship</div>
-                <p class="item-text">We take pride in every project we complete, ensuring the highest standards every time.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fa-solid fa-handshake"></i></div>
-                <div class="title">Reliable & Professional</div>
-                <p class="item-text">We turn up when we say we will and keep you informed throughout the whole process.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                <div class="title">Honest & Transparent</div>
-                <p class="item-text">Clear communication, fair pricing and no hidden extras. What we say is what we do.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fa-solid fa-map-location-dot"></i></div>
-                <div class="title">Local & Trusted</div>
-                <p class="item-text">Based in Belper, we're proud to serve our local community and surrounding areas.</p>
-            </div>
-        </div>
-    </section>
-    <section class="center">
-        <h2 class="text-heading">OUR PROCESS</h2>
-        <h3 class="standout">Build on a simple process</h3>
-        <div class="spacer-35"></div>
-        <div class="our-process">
-            <div class="process">
-                <div class="number">1</div>
-                <div class="title">Discuss</div>
-                <p class="process-text">We listen to your ideas and requirements to understand your project.</p>
-            </div>
-            <div class="arrow"><i class="fa-solid fa-caret-right"></i></div>
-            <div class="process">
-                <div class="number">2</div>
-                <div class="title">Plan</div>
-                <p class="process-text">We provide expert advice and a clear plan to bring your vision to life.</p>
-            </div>
-            <div class="arrow"><i class="fa-solid fa-caret-right"></i></div>
-            <div class="process">
-                <div class="number">3</div>
-                <div class="title">Build</div>
-                <p class="process-text">Our skilled team gets to work, keeping you updated every step of the way.</p>
-            </div>
-            <div class="arrow"><i class="fa-solid fa-caret-right"></i></div>
-            <div class="process">
-                <div class="number">4</div>
-                <div class="title">Deliver</div>
-                <p class="process-text">We complete your project to the highest standard, on time and on a budget.</p>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="row row-2">
-            <div class="column">
-                <div class="image">
-                    <img src="https://pitfielddigital.github.io/qb-building-solutions/images/why-us.png" alt="Why Choose Us" width="100%">
-                </div>
-            </div>
-            <div class="column">
-                <h2 class="text-heading">WHY CHOOSE US</h1>
-                <h3 class="standout">We go the extra mile</h3>
-                <div class="spacer-35"></div>
-                <ul>
-                    <li>Fully insured for your peace of mind</li>
-                    <li>Experienced in domestic and commercial projects</li>
-                    <li>High quality materials and trusted suppliers</li>
-                    <li>Attention to detail from start to finish</li>
-                    <li>Customer satisfaction is our priority</li>
-                </ul>
-                <div class="spacer-35"></div>
-                <a class="btn btn-red" href="https://pitfielddigital.github.io/qb-building-solutions/services">VIEW OUR SERVICES</a>
-            </div>
-        </div>
-    </section>
+<BaseLayout {...pages.about} menu="about">
+  <Hero {...pages.about} banner="homepage" />
+  <section><div class="section-inner row row-2"><div class="column prose"><p class="text-heading">Our team</p><h2>Who we are</h2><p>QB Building Solutions carries out new builds, extensions, orangeries, general building, walls, steel erection, restoration, renovation and kitchens. Our teams include bricklayers, joiners, groundworkers and demolition operatives, with site management available to help coordinate construction work.</p><p>We serve Belper, Duffield, Allestree, Quarndon, Derby, Ashbourne and the wider Derbyshire area. Each enquiry starts with the property, the proposed work and the practical requirements of the site.</p></div><div class="column feature-image"><img src={href('/images/about-us.png')} alt="Brick house with pitched roofs and tall windows" width="720" height="540" loading="lazy" /></div></div></section>
+  <section class="grey"><div class="section-inner"><p class="text-heading">Working together</p><h2>Three divisions, connected work</h2><div class="grid grid-3 division-grid">
+    <article class="division-card"><h3>QB Building Solutions</h3><p>The building and finishing work that creates a new property or changes an existing one, from brickwork and structural work to joinery and kitchens.</p><a class="text-link" href={href('/services/')}>Explore building services →</a></article>
+    <article class="division-card"><h3>QB Groundworks</h3><p>Our separate division for foundations, patios, landscaping, drainage and driveways. Keeping this stage connected to the build gives us greater control over an integral part of the project.</p><a class="text-link" href={href('/services/groundworks/')}>Explore groundworks →</a></article>
+    <article class="division-card"><h3>QB Demolition</h3><p>Our separate division for demolition and site clearance, with enquiries also welcomed for asbestos removal and disposal. The scope and suitable qualified provision must be established before asbestos work is agreed.</p><a class="text-link" href={href('/services/demolition/')}>Explore demolition →</a></article>
+  </div></div></section>
+  <section class="black"><div class="section-inner"><p class="text-heading">Our values</p><h2>What matters to us</h2><div class="grid grid-4 values">{values.map(([title,text],i)=><div class="item"><span class="value-number" aria-hidden="true">0{i+1}</span><h3>{title}</h3><p>{text}</p></div>)}</div></div></section>
+  <section><div class="section-inner"><p class="text-heading">Our process</p><h2>How a project starts</h2><ol class="grid grid-4 process-grid">{process.map(([title,text],i)=><li><span class="number" aria-hidden="true">{i+1}</span><h3>{title}</h3><p>{text}</p></li>)}</ol></div></section>
+  <section class="grey"><div class="section-inner prose"><h2>Choose the service that fits your plans</h2><p>You might need one trade for a defined job or several teams for a larger project. Explore our services, or contact us to discuss where your project fits.</p><div class="actions"><a class="btn btn-red" href={href('/services/')}>Explore our services</a><a class="text-link" href={href('/contact/')}>Discuss your project →</a></div></div></section>
 </BaseLayout>
