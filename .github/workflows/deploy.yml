@@ -28,6 +28,9 @@ jobs:
 
       - name: Build with Astro
         run: npm run build
+        env:
+          SITE_BASE: /qb-building-solutions/
+          PUBLIC_SITE_PREVIEW: 'true'
 
       - name: Check generated pages
         run: npm run check:site
