@@ -1,0 +1,30 @@
+---
+import { href } from '../lib/urls';
+const feedId = 'bY5dIY1GaF0IzoqbvDg3';
+---
+<section class="grey" aria-labelledby="instagram-heading">
+  <div class="section-inner">
+    <div class="section-intro">
+      <p class="text-heading">From our Instagram</p>
+      <h2 id="instagram-heading">A closer look at our work</h2>
+      <p>Explore our latest project updates from Instagram.</p>
+    </div>
+    <div class="instagram-feed">
+      <behold-widget feed-id={feedId}></behold-widget>
+    </div>
+    <noscript><p>Enable JavaScript to view our Instagram feed, or <a href={href('/contact/')}>contact us for examples of our work</a>.</p></noscript>
+    <p class="small-text">Looking for examples relevant to your plans? <a href={href('/contact/')}>Ask our team about similar work</a>.</p>
+  </div>
+</section>
+<script is:inline>
+  (() => {
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://w.behold.so/widget.js';
+    document.head.append(script);
+  })();
+</script>
+<style>
+  .instagram-feed { width:100%; min-width:0; }
+  behold-widget { display:block; width:100%; max-width:100%; }
+</style>
