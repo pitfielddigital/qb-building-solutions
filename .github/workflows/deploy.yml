@@ -3,14 +3,6 @@ name: Deploy to GitHub Pages
 
 on:
   workflow_dispatch:
-    inputs:
-      target:
-        description: 'Deployment target (production requires approved privacy policy)'
-        type: choice
-        default: preview
-        options:
-          - preview
-          - production
 
 concurrency:
   group: github-pages
@@ -26,8 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
-      SITE_BASE: ${{ github.event_name == 'workflow_dispatch' && inputs.target == 'production' && '/' || '/qb-building-solutions/' }}
-      PUBLIC_SITE_PREVIEW: ${{ github.event_name == 'workflow_dispatch' && inputs.target == 'production' && 'false' || 'true' }}
+      SITE_BASE: '/'
+      PUBLIC_SITE_PREVIEW: 'false'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,7 +37,6 @@ jobs:
         run: npm audit --audit-level=high
 
       - name: Check production publication approval
-        if: env.PUBLIC_SITE_PREVIEW == 'false'
         run: npm run check:publication
 
       - name: Check Astro and TypeScript
@@ -56,10 +47,6 @@ jobs:
 
       - name: Check generated site
         run: npm run check:site
-
-      - name: Remove custom domain file from subpath preview
-        if: env.PUBLIC_SITE_PREVIEW == 'true'
-        run: rm -f dist/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
