@@ -1,8 +1,8 @@
 ---
-status: review
+status: approved
 ---
 
-Last updated: 5 October 2026.
+Last updated: 7 October 2026.
 
 ## 1. Who we are and how to contact us
 
@@ -54,7 +54,7 @@ We limit sharing to information needed for the relevant purpose. Providers proce
 
 ## 7. Website resources and external services
 
-Our own images, fonts and styles are served locally by this website. The Instagram feed loads resources from external services as described below. Our hosting service receives technical information when your browser requests a page or other resource.
+Our own images, fonts and styles are served locally by this website. The Instagram feed loads resources from external services as described below. This website is hosted on GitHub Pages. GitHub receives technical information when your browser requests a page or other resource and logs and stores visitors' IP addresses for security purposes, whether or not they are signed into GitHub. See [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 The Projects page uses Behold to display Instagram project updates. Loading the feed connects your browser to Behold and the services delivering its images or videos. These services receive technical request information, including your IP address and browser information, to deliver the feed. Behold states that its widgets do not install cookies or track visitors. See [Behold's widget information](https://behold.so/widgets/) and [privacy policy](https://behold.so/privacy/). Following a post link to Instagram takes you to an external service governed by [Meta's privacy policy](https://privacycenter.instagram.com/policy/).
 
@@ -99,7 +99,9 @@ Depending on the circumstances, you may have the right to:
 - Receive certain information in a portable format.
 - Withdraw consent where we rely on it.
 
-You have an absolute right to object to direct marketing. Withdrawing consent does not affect processing that was lawful before withdrawal. Other rights are subject to legal conditions and exemptions.
+**Your right to object:** You can object to our use of your information based on legitimate interests for reasons relating to your particular situation. We will stop that processing unless we can demonstrate compelling legitimate grounds that override your interests, rights and freedoms, or the processing is needed for legal claims. You have an absolute right to object to direct marketing. To object, email or call us using the contact details above.
+
+Withdrawing consent does not affect processing that was lawful before withdrawal. Other rights are subject to legal conditions and exemptions.
 
 To make a request, contact us using the details above. We may ask for proportionate information to verify your identity. We normally respond within one month and without a fee; lawful extensions or pauses may apply, which we will explain where relevant.
 

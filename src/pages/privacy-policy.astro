@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import { Content, getHeadings } from '../content/privacy-policy.md';
 import pages from '../data/pages.json';
-const headings = await getHeadings();
+const headings = getHeadings();
 ---
 <BaseLayout {...pages.privacy} noindex>
   <Hero {...pages.privacy} />

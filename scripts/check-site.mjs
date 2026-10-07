@@ -7,6 +7,8 @@ const preview = process.env.PUBLIC_SITE_PREVIEW === 'true' || Boolean(base);
 const root = path.resolve(process.env.SITE_CHECK_DIR || 'dist');
 const files = fs.readdirSync(root,{recursive:true}).filter(file=>file.endsWith('.html'));
 const titles = new Set();
+const descriptions = new Set();
+const indexableUrls = new Set();
 const failures = [];
 const decode = value=>value.replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n))).replaceAll('&amp;','&').replaceAll('&quot;','"');
 function check(condition,message) { if(!condition) failures.push(message); }
@@ -20,24 +22,39 @@ for(const file of files) {
   check((html.match(/<h1\b/g)||[]).length===1,`${label}: expected one h1`);
   const meta=Object.fromEntries([...html.matchAll(/<meta\b[^>]+>/g)].map(([tag])=>{const a=attrs(tag);return [a.name||a.property,a.content]}));
   check(meta.description?.length>30,`${label}: description missing`);
+  check(!descriptions.has(meta.description),`${label}: duplicate description`); descriptions.add(meta.description);
+  check(meta.viewport==='width=device-width, initial-scale=1',`${label}: missing responsive viewport`);
+  check(html.includes('lang="en-GB"'),`${label}: missing language`);
   check(meta['og:title']===decode(title),`${label}: OG title mismatch`);
   check(meta['og:description']===meta.description,`${label}: OG description mismatch`);
   const canonical=[...html.matchAll(/<link\b[^>]+>/g)].map(([tag])=>attrs(tag)).find(a=>a.rel==='canonical')?.href;
   check(canonical?.startsWith('https://qbbuildingsolutions.com/'),`${label}: canonical origin`);
   check(!base || !canonical?.includes(base),`${label}: preview base in canonical`);
   check(meta['og:url']===canonical,`${label}: OG URL mismatch`);
+  const route=label==='index.html'?'':label.replace(/index\.html$/,'');
+  check(canonical===`https://qbbuildingsolutions.com/${route}`,`${label}: canonical route mismatch`);
   const excluded=/^(404\.html|projects\/|privacy-policy\/)/.test(label);
   check(meta.robots===(preview||excluded?'noindex, follow':'index, follow'),`${label}: robots incorrect`);
+  if(!excluded&&!preview) indexableUrls.add(canonical);
   check(!html.includes('pitfielddigital.github.io'),`${label}: stale preview URL`);
   check(!/<iframe|<form\b/.test(html),`${label}: unexpected embed/form without approved integration`);
   if(!label.startsWith('privacy-policy/')) check(!/\[CONFIRM:|Do not publish|Use cards for|Related links:\*\*/.test(html),`${label}: editorial instructions leaked`);
-  for(const [,json] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+  const structuredData=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  check(structuredData.length===1,`${label}: expected one JSON-LD graph`);
+  for(const [,json] of structuredData) {
     try { const data=JSON.parse(json); check(data['@graph']?.[0]?.['@type']==='Organization',`${label}: missing Organization`); if(label.startsWith('services/')&&label!=='services/index.html') check(data['@graph'].some(n=>n['@type']==='Service'),`${label}: missing Service`); }
     catch { failures.push(`${label}: invalid JSON-LD`); }
   }
   for(const [tag] of html.matchAll(/<(?:a|img|script|link)\b[^>]*>/g)) {
     const a=attrs(tag); const url=a.href||a.src;
     if(tag.startsWith('<img')) check(/\balt(?:=|\s|>)/.test(tag),`${label}: image alt missing`);
+    if(tag.startsWith('<img')) {
+      check(Number(a.width)>0&&Number(a.height)>0,`${label}: image dimensions missing`);
+      for(const candidate of (a.srcset||'').split(',').filter(Boolean)) {
+        const resource=candidate.trim().split(/\s+/)[0];
+        check(resource.startsWith('/')&&fs.existsSync(path.join(root,resource.slice(base.length))),`${label}: missing responsive image ${resource}`);
+      }
+    }
     if(!url) { if(tag.startsWith('<a ')) failures.push(`${label}: anchor without href`); continue; }
     if(url.startsWith('#')) { check(html.includes(`id="${url.slice(1)}"`),`${label}: broken fragment ${url}`); continue; }
     if(!url.startsWith('/')) continue;
@@ -60,7 +77,12 @@ const sitemapFiles=fs.readdirSync(root).filter(file=>/^sitemap.*\.xml$/.test(fil
 const sitemap=sitemapFiles.map(file=>fs.readFileSync(path.join(root,file),'utf8')).join('\n');
 check(!/\/(?:projects|privacy-policy|404)(?:\/|\.html)<\/loc>/.test(sitemap),'Noindex pages in sitemap');
 const robots=fs.readFileSync(path.join(root,'robots.txt'),'utf8');
+if (!preview) check(fs.readFileSync(path.join(root,'CNAME'),'utf8').trim()==='qbbuildingsolutions.com','Incorrect production custom domain');
 check(preview?robots.includes('Disallow: /'):robots.includes('https://qbbuildingsolutions.com/sitemap-index.xml'),'Incorrect robots');
 if(!preview) for(const slug of Object.keys(services)) check(sitemap.includes(`/services/${slug}/`),`Service missing from sitemap: ${slug}`);
+const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(([,url])=>url).filter(url=>!url.endsWith('.xml'));
+check(sitemapUrls.length===indexableUrls.size,'Sitemap page count differs from indexable pages');
+for(const url of sitemapUrls) check(indexableUrls.has(url),`Unexpected sitemap URL ${url}`);
+for(const url of indexableUrls) check(sitemapUrls.includes(url),`Indexable page missing from sitemap ${url}`);
 assert.equal(failures.length,0,failures.join('\n'));
 console.log(`PASS: ${files.length} pages; 12 services; metadata, headings, JSON-LD, links/assets, privacy isolation, sitemap and robots (${preview?'preview':'production'} configuration).`);

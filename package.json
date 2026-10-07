@@ -9,12 +9,18 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "check": "astro check",
     "check:publication": "node scripts/check-publication.mjs",
     "check:site": "node scripts/check-site.mjs",
+    "prepare:deploy": "node scripts/prepare-deploy.mjs",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^6.1.6"
+    "astro": "^7.3.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
   }
 }

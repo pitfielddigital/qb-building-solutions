@@ -7,5 +7,6 @@ export default defineConfig({
   site: 'https://qbbuildingsolutions.com',
   base,
   trailingSlash: 'always',
+  compressHTML: true,
   integrations: [sitemap({ filter: page => !preview && !/\/(404(?:\.html)?|projects|privacy-policy)\/?$/.test(new URL(page).pathname) })],
 });

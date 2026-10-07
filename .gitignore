@@ -5,6 +5,7 @@ dist/
 
 # dependencies
 node_modules/
+.npm-cache/
 
 # logs
 npm-debug.log*
@@ -15,10 +16,31 @@ pnpm-debug.log*
 
 # environment variables
 .env
-.env.production
+.env.*
+!.env.example
+!.env.*.example
+
+# local credentials and private keys
+.aws/
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# local hosting state
+.vercel/
+.netlify/
+.wrangler/
+
+# local caches and logs
+*.log
+*.tsbuildinfo
 
 # macOS-specific files
 .DS_Store
+Thumbs.db
+Desktop.ini
 
 # jetbrains setting folder
 .idea/

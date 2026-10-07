@@ -1,5 +1,7 @@
 # Website implementation
 
+For the current release status, verified checks and deployment process, see [the 6 October pre-live review](docs/pre-live-review.md) and [README](README.md). The notes below record the original implementation and may describe earlier policy or workflow behavior.
+
 Implemented from `context.md` and `codex-prompt.md` on 5 October 2026.
 
 ## Content and structure
